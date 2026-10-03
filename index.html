@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>enlyst | Battle-Tested Allies in Business, Talent & Technology</title>
+  <meta name="description" content="Bandaging the battle wounds of business. Enlyst provides integrated recruitment, Sniper AI, RPO, finance, marketing, and cloud tech solutions for businesses ready to conquer the future.">
+  <link rel="icon" href="assets/images/logo/enlyst-favicon.svg" type="image/svg+xml">
+
+  <!-- Bunny Fonts (Official Brand Guideline Spec & Pakistan-Safe) -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|inter:300,400,500,600,700|dm-mono:400,500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              blue: '#2D5BE3',
+              green: '#1A7A4A',
+              amber: '#C4620A',
+              purple: '#6B3FA0',
+              obsidian: '#111111',
+              offwhite: '#F7F6F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="selection:bg-[#2D5BE3] selection:text-white">
+
+  <!-- ==================== LIVE TICKER RIBBON ==================== -->
+  <div class="ticker-wrap hidden sm:block border-b border-white/10">
+    <div id="live-ticker-items" class="ticker-content font-mono text-xs">
+      <!-- Populated via app.js -->
+    </div>
+  </div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 navbar-blur border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Enhanced SVG Vector) -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-9 transition-transform duration-300 group-hover:scale-105" id="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#vision" class="hover:text-[#507CF8] transition-colors">Our Vision</a>
+        <a href="#divisions" class="hover:text-[#507CF8] transition-colors">Four Divisions</a>
+        <a href="#sniper-ai" class="hover:text-[#507CF8] transition-colors flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Sniper AI™</span>
+        </a>
+        <a href="#rpo-talent" class="hover:text-[#507CF8] transition-colors">Talent & RPO</a>
+        <a href="#roi-calculator" class="hover:text-[#507CF8] transition-colors">Cost Calculator</a>
+        <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
+          Brand System ↗
+        </a>
+      </nav>
+
+      <!-- Action Items & CTAs -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon text-amber-400 text-sm"></i>
+        </button>
+
+        <!-- Discovery Call CTA Button -->
+        <button onclick="openModal('consultation-modal')" class="btn-primary">
+          <span>Enlist With Us</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-toggle" class="p-2 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
+      <a href="#vision" class="block text-slate-200 hover:text-[#507CF8] py-1">Our Vision</a>
+      <a href="#divisions" class="block text-slate-200 hover:text-[#507CF8] py-1">Four Divisions</a>
+      <a href="#sniper-ai" class="block text-slate-200 hover:text-[#507CF8] py-1">Sniper AI™ Solution</a>
+      <a href="#rpo-talent" class="block text-slate-200 hover:text-[#507CF8] py-1">Talent & RPO</a>
+      <a href="#roi-calculator" class="block text-slate-200 hover:text-[#507CF8] py-1">Cost Savings Calculator</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand Guidelines & Logos ↗</a>
+      <div class="pt-4 flex flex-col gap-3">
+        <button onclick="openModal('consultation-modal')" class="btn-primary w-full py-3">
+          Enlist With Us
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION: BANDAGING THE BATTLE WOUNDS ==================== -->
+  <section class="relative min-h-[92vh] flex items-center justify-center pt-8 pb-20 overflow-hidden">
+    <!-- Interactive Canvas Layer -->
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <!-- Top Pill & Dual Persona Switcher -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        
+        <!-- Live Status Pill -->
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-slate-900/90 border border-white/10 shadow-inner">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-xs font-semibold text-slate-300 tracking-wide font-mono">
+            Bandaging the Battle Wounds of Business
+          </span>
+        </div>
+
+        <!-- Audience Switcher: Employers vs Candidates -->
+        <div class="inline-flex p-1 rounded-xl bg-slate-900/90 border border-white/10 shadow-md">
+          <button id="persona-employer-btn" class="px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-[#2D5BE3] text-white shadow">
+            For Employers & Founders
+          </button>
+          <button id="persona-candidate-btn" class="px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200 transition-all">
+            For Candidates & Leaders
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text & Search Box (7 cols) -->
+        <div class="lg:col-span-7 text-left space-y-6">
+          <h1 id="hero-headline" class="text-4xl sm:text-6xl font-serif leading-[1.08] text-white">
+            Feeling overwhelmed by the relentless punches of inflation, market jitters & cutthroat competition? <br>
+            <span class="text-[#507CF8] italic font-serif">You are not alone.</span>
+          </h1>
+
+          <p id="hero-subtitle" class="text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
+            At <strong>Enlyst</strong>, we understand the scars these battles leave on even the toughest business warriors. We are your battle-tested allies—here to heal financial wounds, streamline your talent operations, deploy predictive AI, and equip you for the fight ahead.
+          </p>
+
+          <!-- Interactive Pain Point Quick-Relief Selector -->
+          <div class="glass-panel p-4 max-w-2xl border-white/10 shadow-2xl">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 block mb-2.5">
+              Select Your Immediate Business Challenge:
+            </span>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <button onclick="highlightDivision('talent')" class="p-2.5 rounded-lg bg-[#2D5BE3]/15 border border-[#2D5BE3]/40 text-left hover:bg-[#2D5BE3]/25 transition">
+                <i class="fa-solid fa-users text-[#507CF8] block mb-1"></i>
+                <strong class="text-white block">Talent Scarcity</strong>
+                <span class="text-[10px] text-slate-400 font-mono">enlyst RPO</span>
+              </button>
+              <button onclick="highlightDivision('finance')" class="p-2.5 rounded-lg bg-[#1A7A4A]/15 border border-[#1A7A4A]/40 text-left hover:bg-[#1A7A4A]/25 transition">
+                <i class="fa-solid fa-receipt text-emerald-400 block mb-1"></i>
+                <strong class="text-white block">Financial Chaos</strong>
+                <span class="text-[10px] text-slate-400 font-mono">enlysum</span>
+              </button>
+              <button onclick="highlightDivision('marketing')" class="p-2.5 rounded-lg bg-[#C4620A]/15 border border-[#C4620A]/40 text-left hover:bg-[#C4620A]/25 transition">
+                <i class="fa-solid fa-bullhorn text-amber-400 block mb-1"></i>
+                <strong class="text-white block">Punching in Dark</strong>
+                <span class="text-[10px] text-slate-400 font-mono">enlybiz</span>
+              </button>
+              <button onclick="highlightDivision('tech')" class="p-2.5 rounded-lg bg-[#6B3FA0]/15 border border-[#6B3FA0]/40 text-left hover:bg-[#6B3FA0]/25 transition">
+                <i class="fa-solid fa-code text-purple-400 block mb-1"></i>
+                <strong class="text-white block">Legacy Tools</strong>
+                <span class="text-[10px] text-slate-400 font-mono">enlysoft</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button id="hero-primary-cta" onclick="openModal('consultation-modal')" class="btn-primary px-8 py-3.5 text-base">
+              <span>Join The Enlyst Alliance</span>
+              <i class="fa-solid fa-shield-halved text-xs"></i>
+            </button>
+            <button onclick="scrollToSection('sniper-ai')" class="btn-secondary px-6 py-3.5 text-base">
+              <i class="fa-solid fa-crosshairs text-emerald-400"></i>
+              <span>Explore Sniper AI™</span>
+            </button>
+          </div>
+
+          <!-- Battle-Tested Metrics Highlights -->
+          <div class="flex flex-wrap items-center gap-6 pt-3 text-xs text-slate-400 font-mono">
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-shield-check text-[#507CF8]"></i> 15%–35% Cost of Hiring Saved
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-bolt text-amber-400"></i> Sniper AI™ Resume Match Engine
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-certificate text-emerald-400"></i> Certified Google & Coursera Academy
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media & Interactive Metric Showcase (5 cols) -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-panel p-2 border-white/10 shadow-2xl relative overflow-hidden">
+            <div class="relative rounded-xl overflow-hidden">
+              <img src="assets/images/hero.jpg" alt="Enlyst Battle-Tested Partners" class="w-full h-[450px] object-cover object-center transform hover:scale-105 transition-transform duration-700">
+              
+              <!-- Dark gradient overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D14] via-transparent to-transparent"></div>
+
+              <!-- Floating Live Sniper AI Match Card -->
+              <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 border border-white/15 shadow-xl">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold font-mono text-emerald-400 uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    Sniper AI™ Match Verified
+                  </span>
+                  <span class="text-[11px] text-slate-400 font-mono">98.4% Fit Score</span>
+                </div>
+                <h4 class="text-sm font-serif text-slate-100 mb-0.5">Recruitment Process Outsourcing (RPO)</h4>
+                <p class="text-xs text-slate-300">End-to-End Talent Acquisition • <strong class="text-emerald-400">35% Cost Reduction</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="hidden sm:flex absolute -top-5 -left-6 glass-panel px-4 py-2.5 border-blue-500/30 shadow-xl items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-[#2D5BE3]/30 flex items-center justify-center text-[#507CF8]">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-200">Enlyst Smart Recruiting</div>
+              <div class="text-[10px] text-slate-400 font-mono">Operating Partner Platform</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Statistics Bar -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10 font-mono">
+        <div class="text-center sm:text-left">
+          <div class="text-3xl sm:text-4xl font-serif text-[#507CF8]">15%–35%</div>
+          <div class="text-xs text-slate-400 mt-1">Average Cost-Per-Hire Saved</div>
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="text-3xl sm:text-4xl font-serif text-emerald-400">14 Days</div>
+          <div class="text-xs text-slate-400 mt-1">Avg. Sourcing to Offer Window</div>
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="text-3xl sm:text-4xl font-serif text-amber-400">4 Divisions</div>
+          <div class="text-xs text-slate-400 mt-1">People • Money • Growth • Tech</div>
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="text-3xl sm:text-4xl font-serif text-purple-400">100% Guaranteed</div>
+          <div class="text-xs text-slate-400 mt-1">90-Day Placement Retention</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THE VISION MANIFESTO ==================== -->
+  <section id="vision" class="py-24 bg-[#07090F] border-y border-white/10 relative">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
+      
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+        <i class="fa-solid fa-flag"></i> The Enlyst Manifesto
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+        "Enlyst isn't just a vision; <br>
+        <span class="text-[#507CF8] italic font-serif">it's a fighting spirit.</span>"
+      </h2>
+
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
+        We stand shoulder-to-shoulder with entrepreneurs and business leaders, offering integrated solutions and unwavering support so you can weather any storm and emerge victorious.
+      </p>
+
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-left space-y-3 font-sans text-sm text-slate-300">
+        <p class="flex items-start gap-3">
+          <i class="fa-solid fa-shield text-[#507CF8] mt-1"></i>
+          <span><strong>Your shield against financial chaos:</strong> Punch inflation in the face with Enlyst's data-driven strategies.</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i class="fa-solid fa-scale-balanced text-emerald-400 mt-1"></i>
+          <span><strong>Don't let regulations knock you out:</strong> Enlyst has your back with seamless compliance, payroll, and HR governance.</span>
+        </p>
+        <p class="flex items-start gap-3">
+          <i class="fa-solid fa-bolt text-amber-400 mt-1"></i>
+          <span><strong>Cut through the competition:</strong> Land powerful blows with Sniper AI™, elite recruitment, and growth architecture.</span>
+        </p>
+      </div>
+
+      <div class="pt-2">
+        <button onclick="openModal('consultation-modal')" class="btn-primary px-8 py-3.5 text-sm">
+          Stop Fighting Alone · Enlist Today
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== THE FOUR ALLIED DIVISIONS ("IMAGINE!") ==================== -->
+  <section id="divisions" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+          <i class="fa-solid fa-cubes"></i> Integrated Operating Platform
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+          Imagine Every Pillar of Your Business <span class="italic text-[#507CF8]">Operating in Harmony</span>.
+        </h2>
+        <p class="text-slate-300 text-base">
+          Four specialized divisions, one shared standard of excellence. Each division is powered by the Enlyst system.
+        </p>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Pillar 1: enlyst (People Powered) -->
+        <div id="div-talent" class="division-card border-[#2D5BE3]/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#507CF8]">
+                <span class="div-dot bg-[#2D5BE3]"></span>
+                01 · HR & TALENT
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20">enlystnow.com</span>
+            </div>
+            
+            <h3 class="text-2xl font-serif text-white mb-2">People Powered</h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Struggling to find and retain top talent? We handle your complete HR needs—from recruitment and RPO to whole-person performance management, creating happy, productive teams that fuel success.
+            </p>
+
+            <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
+              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Recruitment Process Outsourcing (RPO)</li>
+              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Sniper AI™ Sourcing & Matching</li>
+              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Burnout Prevention & Culture</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Brand: #2D5BE3</span>
+            <button onclick="scrollToSection('rpo-talent')" class="text-xs text-[#507CF8] hover:text-white font-semibold">
+              Explore Talent →
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 2: enlysum (Finance Simplified) -->
+        <div id="div-finance" class="division-card border-[#1A7A4A]/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400">
+                <span class="div-dot bg-[#1A7A4A]"></span>
+                02 · FINANCE & ACCOUNTING
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">enlysum.com</span>
+            </div>
+            
+            <h3 class="text-2xl font-serif text-white mb-2">Finance Simplified</h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              No more late nights deciphering complex regulations or wrestling with spreadsheets. We manage accounting, payroll, and taxes so you can focus on what matters—growing your business.
+            </p>
+
+            <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
+              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Full-Cycle Accounting & Bookkeeping</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Automated Payroll & Tax Filing</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Financial Chaos Shield</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Brand: #1A7A4A</span>
+            <button onclick="openModal('consultation-modal')" class="text-xs text-emerald-400 hover:text-white font-semibold">
+              Get Shield →
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 3: enlybiz (Marketing That Matters) -->
+        <div id="div-marketing" class="division-card border-[#C4620A]/40 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-400">
+                <span class="div-dot bg-[#C4620A]"></span>
+                03 · MARKETING & GROWTH
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">enlybiz.com</span>
+            </div>
+            
+            <h3 class="text-2xl font-serif text-white mb-2">Marketing That Matters</h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Tired of throwing punches in the dark? We deliver data-driven digital marketing strategies that connect you with the right customers and land powerful blows on your competition.
+            </p>
+
+            <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
+              <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>Data-Driven Digital Campaigns</li>
+              <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>Customer Acquisition Funnels</li>
+              <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i>Brand Positioning Architecture</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Brand: #C4620A</span>
+            <button onclick="openModal('consultation-modal')" class="text-xs text-amber-400 hover:text-white font-semibold">
+              Scale Growth →
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 4: enlysoft (Tech That Empowers) -->
+        <div id="div-tech" class="division-card border-[#6B3FA0]/40 flex flex-col justify-between bg-[#080c12]">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-purple-400">
+                <span class="div-dot bg-[#6B3FA0]"></span>
+                04 · CLOUD & TECH
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">enlysoft.net</span>
+            </div>
+            
+            <h3 class="text-2xl font-mono text-white mb-2">enlysoft</h3>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed font-sans">
+              Feeling shackled by outdated software? We provide the tools, workflow automation, and custom cloud infrastructure you need to automate repetitive tasks and punch above your weight in the digital arena.
+            </p>
+
+            <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
+              <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Workflow & Task Automation</li>
+              <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Cloud Systems Integration</li>
+              <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Modern Software Support</li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Font: DM Mono</span>
+            <button onclick="openModal('consultation-modal')" class="text-xs text-purple-400 hover:text-white font-semibold font-mono">
+              Empower Tech →
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SNIPER AI™ SHOWCASE & INTERACTIVE MATCHER ==================== -->
+  <section id="sniper-ai" class="py-24 bg-[#080C16] border-y border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Details & Value Prop -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase">
+            <i class="fa-solid fa-crosshairs"></i> Proprietary Artificial Intelligence
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-serif text-white">
+            Sniper AI™: Revolutionizing Recruitment With <span class="italic text-emerald-400 font-serif">Machine Precision</span>.
+          </h2>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Developed in-house by Enlyst Smart Recruiting, <strong>Sniper AI</strong> uses cutting-edge machine learning to swiftly and accurately match resumes with detailed job specifications, slashing time-to-hire and cutting hiring costs by <strong>15% to 35%</strong>.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="text-2xl font-serif text-emerald-400 mb-1">15%–35%</div>
+              <div class="text-xs font-bold text-slate-200">Hiring Cost Reduction</div>
+              <p class="text-[11px] text-slate-400 mt-1">Minimizes drop-off rates and eliminates wasted recruiter screening hours.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="text-2xl font-serif text-[#507CF8] mb-1">Seamless ATS</div>
+              <div class="text-xs font-bold text-slate-200">Instant Integration</div>
+              <p class="text-[11px] text-slate-400 mt-1">Integrates smoothly with corporate applicant tracking systems.</p>
+            </div>
+          </div>
+
+          <!-- Pricing & Trial Banner -->
+          <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/30 flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 block font-bold">Sniper AI Licensing</span>
+              <span class="text-sm font-bold text-white font-mono">Starts at $225 / 12-Month Contract</span>
+              <span class="text-xs text-slate-400 block mt-0.5">• Includes 7-Day Risk-Free Trial</span>
+            </div>
+            <button onclick="openModal('consultation-modal')" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition">
+              Start Free 7-Day Trial
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Sniper AI Match Simulator -->
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-6 sm:p-8 border-emerald-500/30 shadow-2xl relative">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-crosshairs"></i>
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-white font-sans">Sniper AI™ Match Simulator</h4>
+                  <p class="text-[11px] font-mono text-slate-400">Real-Time Machine Learning Sourcing</p>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 font-bold">
+                ENGINE ACTIVE
+              </span>
+            </div>
+
+            <!-- Role Specification Target -->
+            <div class="space-y-4 mb-6">
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-400 mb-1">Target Job Specification:</label>
+                <select id="sniper-sim-job" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-lg text-xs text-slate-200 font-mono focus:outline-none focus:border-emerald-400">
+                  <option value="ml-lead">Lead ML Engineer (LLMs, PyTorch, Distributed Sourcing)</option>
+                  <option value="vp-eng">VP of Engineering (100+ Dev Scaling, FinTech Architecture)</option>
+                  <option value="data-analyst">Senior Data Analyst (SQL, Python, Tableau, Tableau)</option>
+                  <option value="biz-analyst">Certified Business Analysis Professional (CBAP®)</option>
+                </select>
+              </div>
+
+              <!-- Interactive Candidate Match Results -->
+              <div class="p-4 rounded-xl bg-slate-950/80 border border-white/10 space-y-3 font-mono text-xs">
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Candidate Pipeline Scanned:</span>
+                  <span class="text-white font-bold">1,842 Profiles</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Sniper Fit Accuracy:</span>
+                  <span class="text-emerald-400 font-bold">98.4% Match</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400">Automated Screening Time:</span>
+                  <span class="text-cyan-400 font-bold">1.2 Seconds</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div class="bg-gradient-to-r from-emerald-500 to-[#2D5BE3] h-2 rounded-full w-[96%] animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center justify-between">
+              <span class="text-[11px] text-slate-400 font-sans">
+                <i class="fa-solid fa-lock text-emerald-400 mr-1"></i> Integrates with Greenhouse, Lever, Workday
+              </span>
+              <button onclick="openModal('consultation-modal')" class="btn-primary py-2 px-5 text-xs">
+                Deploy Sniper AI™
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TALENT ACQUISITION & RPO SOLUTIONS ==================== -->
+  <section id="rpo-talent" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+          <i class="fa-solid fa-handshake"></i> Strategic Talent Solutions
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+          Recruitment Process Outsourcing (RPO) & <span class="italic text-[#507CF8]">Acclaimed Sourcing</span>
+        </h2>
+        <p class="text-slate-300 text-base">
+          Enlyst Smart Recruiting has earned a sterling industry reputation for effective sourcing methods, customer-centric solutions, and long-term organizational partnerships.
+        </p>
+      </div>
+
+      <!-- 4 Pillars of Enlyst Recruiting Services -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+        <div class="glass-panel p-6">
+          <div class="w-10 h-10 rounded-xl bg-blue-600/20 text-[#507CF8] flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Talent Acquisition Solutions</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Acclaimed sourcing strategies to attract top performers, rigorous candidate screening, and full-lifecycle RPO management.
+          </p>
+          <span class="text-[10px] font-mono text-blue-400">Cost Savings & Scalability</span>
+        </div>
+
+        <div class="glass-panel p-6">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Performance Management</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Evaluating productivity and quality. Avoiding employee burnout with thoughtful resource utilization and continuous quarterly feedback.
+          </p>
+          <span class="text-[10px] font-mono text-emerald-400">Whole-Person Metric Approach</span>
+        </div>
+
+        <div class="glass-panel p-6">
+          <div class="w-10 h-10 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Training & Development</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Upskilling through certified Data Analytics, Business Analysis (CBAP®), and Google Career Certificates Employer Consortium.
+          </p>
+          <span class="text-[10px] font-mono text-amber-400">$92,000+ Entry Salary Prep</span>
+        </div>
+
+        <div class="glass-panel p-6">
+          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">HR Consulting Services</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">
+            Workforce planning, organizational restructuring, conflict resolution mediation, and executive coaching.
+          </p>
+          <span class="text-[10px] font-mono text-purple-400">Tailored Strategic Counsel</span>
+        </div>
+
+      </div>
+
+      <!-- Opportunities & Talent Explorer -->
+      <div class="glass-panel p-6 sm:p-10 border-white/10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-serif text-white">Active Positions & Vetted Candidates</h3>
+            <p class="text-xs font-mono text-slate-400 mt-1">Real-time openings managed by Enlyst Smart Recruiting</p>
+          </div>
+
+          <!-- Quick Filters -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#2D5BE3] text-white transition" data-category="all">
+              All Disciplines
+            </button>
+            <button class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 text-slate-300 hover:bg-white/10 transition" data-category="tech">
+              Tech & AI
+            </button>
+            <button class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 text-slate-300 hover:bg-white/10 transition" data-category="executive">
+              Leadership
+            </button>
+            <button class="job-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 text-slate-300 hover:bg-white/10 transition" data-category="finance">
+              Finance
+            </button>
+          </div>
+        </div>
+
+        <div id="jobs-list-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Dynamically populated from data.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE HIRING ROI CALCULATOR ==================== -->
+  <section id="roi-calculator" class="py-24 bg-[#07090F] border-t border-white/10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-4 uppercase">
+          <i class="fa-solid fa-calculator"></i> Bottom-Line Impact
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+          Calculate Your <span class="italic text-emerald-400">RPO Cost Savings</span>
+        </h2>
+        <p class="text-slate-300 text-base">
+          Enlyst RPO reduces the average cost of hiring by 15% to 35%. Calculate your net business savings below.
+        </p>
+      </div>
+
+      <!-- Calculator Card -->
+      <div class="glass-panel p-8 sm:p-12 max-w-5xl mx-auto border-white/10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Sliders Left Column (7 cols) -->
+          <div class="lg:col-span-7 space-y-8">
+            
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-sm font-bold text-slate-200">Open Critical Positions</label>
+                <span id="calc-hires-val" class="text-sm font-extrabold text-[#507CF8] px-3 py-1 bg-slate-900 rounded-md border border-white/10 font-mono">3 Hires</span>
+              </div>
+              <input id="calc-hires-slider" type="range" min="1" max="15" value="3" step="1">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1 font-mono">
+                <span>1 Role</span>
+                <span>8 Roles</span>
+                <span>15+ Roles</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-sm font-bold text-slate-200">Target Role Base Salary</label>
+                <span id="calc-salary-val" class="text-sm font-extrabold text-emerald-400 px-3 py-1 bg-slate-900 rounded-md border border-white/10 font-mono">$220k</span>
+              </div>
+              <input id="calc-salary-slider" type="range" min="120000" max="380000" value="220000" step="10000">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1 font-mono">
+                <span>$120,000</span>
+                <span>$250,000</span>
+                <span>$380,000+</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-sm font-bold text-slate-200">Current In-House Hiring Cycle</label>
+                <span id="calc-days-val" class="text-sm font-extrabold text-purple-400 px-3 py-1 bg-slate-900 rounded-md border border-white/10 font-mono">60 Days</span>
+              </div>
+              <input id="calc-days-slider" type="range" min="30" max="120" value="60" step="5">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1 font-mono">
+                <span>30 Days (Fast)</span>
+                <span>60 Days (Avg)</span>
+                <span>120 Days (Severe)</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-400 italic">
+              *Model accounts for 15%–35% direct cost-per-hire reduction via Enlyst RPO & Sniper AI™ automation.
+            </p>
+          </div>
+
+          <!-- Results Card Right Column (5 cols) -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-blue-950/70 p-6 sm:p-8 rounded-2xl border border-blue-500/30 text-center shadow-xl">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-400 block mb-1">Projected Net Savings</span>
+            
+            <div id="calc-output-savings" class="text-4xl sm:text-5xl font-serif text-emerald-400 my-3">
+              $112,500
+            </div>
+            
+            <p class="text-xs text-slate-300 mb-6">
+              Saved in reduced recruitment overhead, agency markups, and recruiter vacancy downtime.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-6 pt-4 border-t border-white/10 text-left font-mono">
+              <div class="bg-white/5 p-3 rounded-lg">
+                <span class="text-[11px] text-slate-400 block">Time to Fill Saved</span>
+                <span id="calc-output-days" class="text-lg font-bold text-slate-100">46 Days</span>
+              </div>
+              <div class="bg-white/5 p-3 rounded-lg">
+                <span class="text-[11px] text-slate-400 block">Eng Hours Saved</span>
+                <span id="calc-output-hours" class="text-lg font-bold text-slate-100">84 hrs</span>
+              </div>
+            </div>
+
+            <button onclick="openModal('consultation-modal')" class="btn-primary w-full py-3 text-sm">
+              Schedule Candidate Briefing
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CALL TO ACTION: READY TO STOP FIGHTING ALONE? ==================== -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <div class="glass-panel p-8 sm:p-14 border-white/10 shadow-2xl relative">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+          <i class="fa-solid fa-shield"></i> Business Survival & Scale
+        </span>
+        
+        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+          Ready to Stop Fighting Alone? <br>
+          <span class="text-[#507CF8] italic font-serif">Enlist Your Battle-Tested Allies.</span>
+        </h2>
+        
+        <p class="text-slate-300 text-base max-w-2xl mx-auto mb-8">
+          Join forces with Enlyst to heal financial chaos, deploy world-class talent, automate software bottlenecks, and conquer your market.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button onclick="openModal('consultation-modal')" class="btn-primary px-8 py-3.5 text-base">
+            <i class="fa-solid fa-handshake mr-2"></i> Book A Strategy Briefing
+          </button>
+          <button onclick="openApplyModal('')" class="btn-secondary px-8 py-3.5 text-base">
+            <i class="fa-solid fa-file-arrow-up mr-2"></i> Submit Resume / Candidate Profile
+          </button>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-mono">
+          <span><i class="fa-solid fa-check text-[#507CF8] mr-1"></i> Strictly Confidential</span>
+          <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> 7-Day Sniper AI™ Free Trial</span>
+          <span><i class="fa-solid fa-check text-purple-400 mr-1"></i> 90-Day Placement Guarantee</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-[#07090F] text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Info (2 cols) -->
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-8">
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Operating partner platform for early-stage and hypergrowth businesses. Bandaging the battle wounds of business across talent, finance, marketing, and cloud tech.
+          </p>
+          <div class="pt-1">
+            <a href="brand.html" class="text-xs font-mono text-[#507CF8] hover:underline flex items-center gap-1">
+              <span>View Official Brand Guidelines & Logo Assets</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- The 4 Divisions -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Four Divisions</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#divisions" class="hover:text-blue-400 transition">enlyst (HR & Talent)</a></li>
+            <li><a href="#divisions" class="hover:text-emerald-400 transition">enlysum (Finance & Accounting)</a></li>
+            <li><a href="#divisions" class="hover:text-amber-400 transition">enlybiz (Marketing & Growth)</a></li>
+            <li><a href="#divisions" class="hover:text-purple-400 transition">enlysoft (Cloud & Tech)</a></li>
+          </ul>
+        </div>
+
+        <!-- Core Solutions -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Solutions</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#sniper-ai" class="hover:text-blue-400 transition">Sniper AI™ Sourcing</a></li>
+            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Recruitment Outsourcing (RPO)</a></li>
+            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Performance Reviews & Coaching</a></li>
+            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Training Academy & CBAP®</a></li>
+            <li><a href="#roi-calculator" class="hover:text-blue-400 transition">Hiring Cost Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Corporate Entity -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Entity Notice</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-2">
+            <strong class="text-slate-200">Legal Entity:</strong><br>
+            Enlyst Smart Recruiting Pvt Ltd
+          </p>
+          <p class="text-[11px] text-slate-500 font-mono">
+            Domains: enlystnow.com • enlysum.com • enlybiz.com • enlysoft.net
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div>
+          &copy; 2026 Enlyst Smart Recruiting Pvt Ltd. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6 text-slate-500">
+          <span>Non-Disclosure Protected</span>
+          <span>Equal Opportunity Employer</span>
+          <a href="brand.html" class="hover:text-slate-300">Design System</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: APPLICATION ==================== -->
+  <div id="apply-modal" class="modal-overlay">
+    <div class="modal-box p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase text-[#507CF8] tracking-wider">Fast-Track Application</span>
+          <h3 class="text-2xl font-serif text-slate-100 mt-0.5">Submit Confidential Candidate Profile</h3>
+        </div>
+        <button onclick="closeModal('apply-modal')" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="job-apply-form" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name *</label>
+            <input type="text" required placeholder="Alex Mercer" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-[#2D5BE3]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address *</label>
+            <input type="email" required placeholder="alex@domain.com" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-[#2D5BE3]">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Attach Resume / CV (PDF, DOCX)</label>
+          <div id="resume-dropzone" class="border-2 border-dashed border-white/20 hover:border-[#2D5BE3] bg-slate-900/60 rounded-xl p-6 text-center cursor-pointer transition">
+            <input type="file" id="resume-file-input" class="hidden" accept=".pdf,.doc,.docx">
+            <div id="resume-dropzone-text">
+              <i class="fa-solid fa-cloud-arrow-up text-[#507CF8] text-3xl mb-2"></i>
+              <p class="text-sm font-semibold text-slate-200">Drag & drop your resume here for Sniper AI™ analysis</p>
+              <span class="text-xs text-slate-500 font-mono">Confidentiality guaranteed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal('apply-modal')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">
+            Cancel
+          </button>
+          <button type="submit" class="btn-primary py-2.5 px-6 text-xs">
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: CONSULTATION ==================== -->
+  <div id="consultation-modal" class="modal-overlay">
+    <div class="modal-box p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase text-[#507CF8] tracking-wider">Partner Consultation</span>
+          <h3 class="text-2xl font-serif text-slate-100 mt-0.5">Enlist With Our Battle-Tested Team</h3>
+          <p class="text-xs text-slate-400 mt-0.5">15-minute briefing with an Enlyst Operating Partner.</p>
+        </div>
+        <button onclick="closeModal('consultation-modal')" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-slate-300">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="consultation-form" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name *</label>
+            <input type="text" required placeholder="Elena Rostova" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-[#2D5BE3]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Corporate Email *</label>
+            <input type="email" required placeholder="elena@company.com" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-[#2D5BE3]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Company / Organization *</label>
+            <input type="text" required placeholder="Synthetix Labs" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-100 focus:outline-none focus:border-[#2D5BE3]">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1">Primary Division Needed</label>
+            <select class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-sm text-slate-200 focus:outline-none focus:border-[#2D5BE3]">
+              <option>enlyst (HR, RPO & Talent)</option>
+              <option>enlysum (Finance & Accounting)</option>
+              <option>enlybiz (Marketing & Growth)</option>
+              <option>enlysoft (Cloud & Tech)</option>
+              <option>Sniper AI™ Enterprise License</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pt-3 flex items-center justify-end gap-3">
+          <button type="button" onclick="closeModal('consultation-modal')" class="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white">
+            Cancel
+          </button>
+          <button type="submit" class="btn-primary py-2.5 px-6 text-xs">
+            Confirm Briefing
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Quick highlighter function for division pain points
+    function highlightDivision(divKey) {
+      const elem = document.getElementById(`div-${divKey}`);
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        elem.classList.add('ring-2', 'ring-[#2D5BE3]');
+        setTimeout(() => elem.classList.remove('ring-2', 'ring-[#2D5BE3]'), 2000);
+      }
+    }
+  </script>
+</body>
+</html>
