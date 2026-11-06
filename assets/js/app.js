@@ -86,9 +86,10 @@ function initHeroCanvas() {
         }
       }
 
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = p.color + '0.7)';
+      ctx.fillStyle = isLight ? 'rgba(45, 91, 227, 0.45)' : (p.color + '0.7)');
       ctx.fill();
 
       // Connect nearby particles
@@ -101,7 +102,7 @@ function initHeroCanvas() {
         if (dist < 115) {
           const alpha = (1 - dist / 115) * 0.25;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
+          ctx.strokeStyle = isLight ? `rgba(45, 91, 227, ${alpha * 0.9})` : `rgba(56, 189, 248, ${alpha})`;
           ctx.lineWidth = 0.8;
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
@@ -140,12 +141,14 @@ function initThemeToggle() {
   });
 
   function updateLogo(theme) {
-    if (!logo) return;
-    if (theme === 'light') {
-      logo.src = 'assets/images/logo/enlyst-primary-light.svg';
-    } else {
-      logo.src = 'assets/images/logo/enlyst-primary-dark.svg';
-    }
+    const logos = document.querySelectorAll('img[src*="enlyst-primary-"], #nav-brand-logo');
+    logos.forEach(img => {
+      if (theme === 'light') {
+        img.src = 'assets/images/logo/enlyst-primary-light.svg';
+      } else {
+        img.src = 'assets/images/logo/enlyst-primary-dark.svg';
+      }
+    });
   }
 
   function updateThemeIcon(theme) {
