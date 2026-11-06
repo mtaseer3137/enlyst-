@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enlyst Foundation — Himat-Hikmat Research &amp; Punjab Education</title>
+  <meta name="description" content="The Enlyst Foundation funds doctoral-grade field research on Pakistan's public education crisis through the Himat-Hikmat framework. Evidence-based policy proposals for Punjab and beyond."/>
+  <link rel="icon" href="assets/images/logo/enlyst-favicon.svg" type="image/svg+xml"/>
+
+  <!-- Bunny Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net"/>
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|inter:300,400,500,600,700|dm-mono:400,500,700&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              blue: '#2D5BE3',
+              green: '#1A7A4A',
+              amber: '#C4620A',
+              purple: '#6B3FA0',
+              gold: '#C4A24A',
+              obsidian: '#111111',
+              offwhite: '#F7F6F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="selection:bg-[#C4A24A] selection:text-white">
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar border-b border-amber-500/20 hidden sm:flex items-center justify-center gap-5 py-2 px-6 text-xs font-mono text-amber-200/80 bg-[#0A0D15]/90 backdrop-blur-md">
+    <span>Part of the <a href="index.html" class="text-amber-400 font-bold hover:underline">Enlyst Framework ↗</a></span>
+    <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+    <span>Foundation · Himat-Hikmat Research</span>
+    <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+    <span>Punjab, Pakistan</span>
+  </div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 navbar-blur border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-9 transition-transform duration-300 group-hover:scale-105" id="nav-brand-logo">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-[#507CF8] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#507CF8] transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-[#507CF8] transition-colors">Services</a>
+        <a href="foundation.html" class="text-amber-400 font-semibold border-b-2 border-amber-400 pb-1">Foundation</a>
+        <a href="blog.html" class="hover:text-[#507CF8] transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-[#507CF8] transition-colors">Contact</a>
+        <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
+          Brand System ↗
+        </a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon text-amber-400 text-sm"></i>
+        </button>
+
+        <a href="contact.html?type=foundation" class="btn-primary" style="background:#C4A24A;border-color:rgba(196,162,74,.4);color:#0A0D15;">
+          <span>Partner with Foundation</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-toggle" class="p-2 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
+      <a href="index.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Home</a>
+      <a href="about.html" class="block text-slate-200 hover:text-[#507CF8] py-1">About Us</a>
+      <a href="services.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Services</a>
+      <a href="foundation.html" class="block text-amber-400 font-bold py-1">Foundation</a>
+      <a href="blog.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Blog</a>
+      <a href="contact.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Contact</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand System ↗</a>
+      <div class="pt-4">
+        <a href="contact.html?type=foundation" class="btn-primary w-full py-3 text-center" style="background:#C4A24A;color:#0A0D15;">
+          Partner with Foundation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-16 pb-24 overflow-hidden border-b border-white/10" id="top">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 uppercase">
+              <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              Enlyst Foundation · Non-Commercial Research Mandate
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-serif text-white leading-[1.08]">
+              Courage and wisdom in service of <span class="italic text-amber-400 font-serif">children who wait.</span>
+            </h1>
+
+            <p class="text-lg text-slate-300 font-sans leading-relaxed max-w-2xl">
+              <strong>Himat-Hikmat</strong> — courage and wisdom in Urdu — is the research framework behind Pakistan's most rigorous doctoral-grade investigation into public education inequality. Three years of Punjab field data. One unflinching argument for change.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#research" class="btn-primary" style="background:#C4A24A;color:#0A0D15;">
+                <span>Read the Research</span>
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+              </a>
+              <a href="#roadmap" class="btn-secondary">
+                <span>5-Year Legislative Roadmap →</span>
+              </a>
+            </div>
+
+            <!-- Stats Trio -->
+            <div class="grid grid-cols-3 gap-3 pt-6 border-t border-white/10 text-center font-mono">
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-amber-500/20">
+                <div class="text-3xl font-serif text-amber-400">24.3%</div>
+                <div class="text-[10px] text-slate-400 uppercase mt-1">Measurable Learning Deficiency</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-amber-500/20">
+                <div class="text-3xl font-serif text-amber-400">55%</div>
+                <div class="text-[10px] text-slate-400 uppercase mt-1">Teachers Lacking AI Readiness</div>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-amber-500/20">
+                <div class="text-3xl font-serif text-amber-400">37K+</div>
+                <div class="text-[10px] text-slate-400 uppercase mt-1">Children in Primary Sample</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Field Data Cards Stack -->
+          <div class="lg:col-span-5 space-y-4">
+            
+            <div class="glass-panel p-6 border-l-4 border-l-amber-400 space-y-2">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400">
+                Finding · Punjab School Survey
+              </span>
+              <p class="text-xs text-slate-200 leading-relaxed font-sans">
+                Structural inequality — not teacher effort — is the primary driver of learning deficiency. Resource allocation at district level explains <strong>68% of the variance</strong> in primary school outcomes.
+              </p>
+              <div class="text-[10px] font-mono text-slate-400 pt-1">
+                Doctoral Research · University of Punjab · Dr. Imran Sabir
+              </div>
+            </div>
+
+            <div class="glass-panel p-6 border-l-4 border-l-blue-400 space-y-2">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-blue-400">
+                Finding · GITTC Lahore Teacher Cohort
+              </span>
+              <p class="text-xs text-slate-200 leading-relaxed font-sans">
+                <strong>55% of surveyed government teachers</strong> report zero exposure to AI-assisted lesson planning tools. Of the 45% with exposure, fewer than 12% use them consistently in classroom delivery.
+              </p>
+              <div class="text-[10px] font-mono text-slate-400 pt-1">
+                GITTC Lahore · Government AI Training Centre · 2024–2025
+              </div>
+            </div>
+
+            <div class="glass-panel p-6 border-l-4 border-l-emerald-400 space-y-2">
+              <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
+                Policy Implication · Legislative Roadmap
+              </span>
+              <p class="text-xs text-slate-200 leading-relaxed font-sans">
+                The research proposes mandatory AI literacy standards for all new government school teacher appointments from 2027 — embedded into PPSC testing criteria and BISE curriculum review cycles.
+              </p>
+              <div class="text-[10px] font-mono text-slate-400 pt-1">
+                Proposed: Punjab Education Commission · 2026 Submission
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== THE 4 LENSES OF HIMAT-HIKMAT ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10" id="research">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-4 uppercase">
+            <i class="fa-solid fa-glasses"></i> The Research Framework
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            Himat-Hikmat: <span class="italic text-amber-400">Four Lenses. One Argument</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            Structured around four analytical lenses addressing each systemic failure layer in Pakistan's public education system. All four converge on a single policy conclusion.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          
+          <div class="glass-card-interactive p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 01</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Structural <em class="italic text-amber-400">Inequality</em></h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                How resource allocation models at federal, provincial, and district level create systemic disadvantage that individual teacher effort cannot overcome — regardless of motivation or training.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 text-[10px] font-mono text-slate-400 mt-6">
+              Quota &amp; budget distribution models
+            </div>
+          </div>
+
+          <div class="glass-card-interactive p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 02</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Technology <em class="italic text-amber-400">Readiness Gap</em></h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                The delta between the curriculum's stated digital learning goals and the actual technological infrastructure and teacher competency available at the point of instruction in government schools.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 text-[10px] font-mono text-slate-400 mt-6">
+              Classroom delivery reality
+            </div>
+          </div>
+
+          <div class="glass-card-interactive p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 03</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Governance <em class="italic text-amber-400">Accountability</em></h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                How performance measurement and accountability chains in the provincial education bureaucracy create perverse incentives — where reported metrics diverge systematically from classroom reality.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 text-[10px] font-mono text-slate-400 mt-6">
+              Bureaucratic metric divergence
+            </div>
+          </div>
+
+          <div class="glass-card-interactive p-6 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 04</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Policy <em class="italic text-amber-400">Translation</em></h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans">
+                The gap between research evidence and legislative action in Pakistan's education sector — and the institutional design required to close that gap within a single provincial policy cycle.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-white/10 text-[10px] font-mono text-slate-400 mt-6">
+              Legislative policy mechanisms
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controlled Regression Field Data Grid -->
+        <div class="glass-panel p-8 sm:p-10 border-white/10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-4">
+              <span class="text-xs font-mono font-bold uppercase text-amber-400">Field Data Authenticity</span>
+              <h3 class="text-3xl font-serif text-white">Numbers from the actual classrooms.</h3>
+              <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                Every statistic in this research was gathered through primary field visits, structured teacher interviews, and student assessment sampling across Lahore, Sheikhupura, and Gujranwala divisions — not government-reported aggregate data.
+              </p>
+              <div class="text-xs font-mono text-slate-400 pt-2">
+                Controlled regression model · Sample N=37,214 · p &lt; 0.001 · Doctoral Research supervised by Dr. Imran Sabir
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4 text-center font-mono text-xs">
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <span class="text-slate-400 block mb-1">Catchment Sample</span>
+                <span class="text-2xl font-bold text-white">37,214</span>
+                <span class="text-[10px] text-slate-500 block mt-1">Stratified by District</span>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <span class="text-slate-400 block mb-1">Teacher Interviews</span>
+                <span class="text-2xl font-bold text-amber-400">200+</span>
+                <span class="text-[10px] text-slate-500 block mt-1">Structured In-Person</span>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <span class="text-slate-400 block mb-1">Variance Explained</span>
+                <span class="text-2xl font-bold text-emerald-400">68%</span>
+                <span class="text-[10px] text-slate-500 block mt-1">By Resource Allocation</span>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <span class="text-slate-400 block mb-1">Consistent AI Use</span>
+                <span class="text-2xl font-bold text-blue-400">&lt;12%</span>
+                <span class="text-[10px] text-slate-500 block mt-1">Classroom Delivery</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5-YEAR LEGISLATIVE ROADMAP ==================== -->
+    <section class="py-24 border-b border-white/10" id="roadmap">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20 mb-4 uppercase">
+            <i class="fa-solid fa-timeline"></i> Action Plan
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            From Thesis to <span class="italic text-amber-400">National Replication</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            The Himat-Hikmat research is not designed to sit in a university archive. It is engineered to move — from doctoral defence to provincial legislation to national adoption within five years.
+          </p>
+        </div>
+
+        <div class="space-y-6 max-w-4xl mx-auto relative pl-6 border-l-2 border-amber-500/30">
+          
+          <!-- 2024-2025 -->
+          <div class="relative pl-6">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 border-4 border-[#0A0D14]"></div>
+            <span class="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">2024–2025 · Complete</span>
+            <h4 class="text-xl font-serif text-white mt-1">Primary Field Research</h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+              37,000+ children sampled. 200+ teacher interviews. GITTC Lahore cohort data collected. Regression models finalised. Doctoral thesis drafted and submitted for supervisor review.
+            </p>
+          </div>
+
+          <!-- 2026 -->
+          <div class="relative pl-6">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-[#0A0D14] animate-ping"></div>
+            <span class="text-xs font-mono font-bold uppercase text-amber-400 tracking-wider">2026 · In Progress</span>
+            <h4 class="text-xl font-serif text-white mt-1">Doctoral Defence &amp; Publication</h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+              Thesis defence at University of Punjab under Dr. Imran Sabir. Peer-reviewed publication of primary findings. Policy brief prepared for Punjab Education Commission submission window.
+            </p>
+          </div>
+
+          <!-- 2027 -->
+          <div class="relative pl-6">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
+            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2027 · Planned</span>
+            <h4 class="text-xl font-serif text-white mt-1">Provincial Policy Submission</h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+              Formal submission to Punjab Education Department: AI literacy standards for new government school teacher appointments. Proposed integration into PPSC testing criteria and BISE curriculum review cycles.
+            </p>
+          </div>
+
+          <!-- 2028 -->
+          <div class="relative pl-6">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
+            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2028 · Planned</span>
+            <h4 class="text-xl font-serif text-white mt-1">Pilot Implementation</h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+              GITTC Lahore delivers first cohort under the new standard. Enlyst Education arm provides curriculum support. Outcome data collected for legislative case.
+            </p>
+          </div>
+
+          <!-- 2029-2030 -->
+          <div class="relative pl-6">
+            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
+            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2029–2030 · Vision</span>
+            <h4 class="text-xl font-serif text-white mt-1">National Replication</h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+              Punjab model presented to Federal Education Ministry as replication template. HEC engagement for integration into pre-service teacher training nationwide.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== GOVERNANCE PRINCIPLES ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10" id="governance">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-panel p-8 sm:p-12 border-amber-500/20">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <div class="lg:col-span-5 space-y-4">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">Foundation Governance</span>
+              <h3 class="text-3xl font-serif text-white leading-snug">
+                Ring-fenced. <br/><em class="italic text-amber-400 font-serif">By design.</em>
+              </h3>
+              <p class="text-sm font-serif italic text-slate-300 leading-relaxed border-l-2 border-amber-400 pl-4">
+                "The Foundation does not exist to make the business look good. It exists because the problem is real, the data is ours, and the obligation cannot be outsourced."
+              </p>
+              <cite class="block text-xs font-mono text-slate-400 not-italic">
+                — Wasim Hassan, Founder · Enlyst Foundation
+              </cite>
+              <div class="pt-2">
+                <a href="contact.html?type=foundation" class="btn-primary py-2.5 px-6 text-xs" style="background:#C4A24A;color:#0A0D15;">
+                  Partner With The Foundation
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-4 text-xs font-sans text-slate-300 leading-relaxed">
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <strong class="text-amber-400 block font-mono text-xs mb-1">01 · REVENUE RING-FENCE</strong>
+                No commercial revenue from enlyst, enlysum, enlybiz, or enlysoft is used to fund Foundation research. The Foundation is funded independently through grants, partnerships, and direct contributions.
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <strong class="text-amber-400 block font-mono text-xs mb-1">02 · RESEARCH INDEPENDENCE</strong>
+                No commercial client has editorial influence over research conclusions, publication timing, or policy positions. Findings are published as documented — never sanitised for business comfort.
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <strong class="text-amber-400 block font-mono text-xs mb-1">03 · DATA STEWARDSHIP</strong>
+                All school visit data, student outcome data, and teacher interview data is anonymised, stored securely, and never used as marketing collateral without researcher consent.
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
+                <strong class="text-amber-400 block font-mono text-xs mb-1">04 · RESEARCHER PRIMACY</strong>
+                Dr. Imran Sabir and the doctoral research team hold final authority over all published findings. The Foundation is the enabler, not the author.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FINALE CTA ==================== -->
+    <section class="py-24 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+          Every partnership <br>
+          <span class="italic text-amber-400 font-serif">extends the reach.</span>
+        </h2>
+        <p class="text-slate-300 text-base max-w-xl mx-auto">
+          Research partnerships, academic collaboration, grant funding, and policy inquiry — all welcome and reviewed personally.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="contact.html?type=foundation" class="btn-primary px-8 py-3.5 text-sm" style="background:#C4A24A;color:#0A0D15;">
+            Get in Touch With Foundation →
+          </a>
+          <a href="about.html" class="btn-secondary px-8 py-3.5 text-sm">
+            About Enlyst →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-[#07090F] text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-8">
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Smart Recruiting &amp; HR Intelligence · Practice 01 of the Enlyst Framework. Systems protect processes so humans can protect humans.
+          </p>
+          <div class="pt-1 text-xs font-mono text-slate-500 space-y-1">
+            <p>Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000</p>
+            <p>Phone: <a href="tel:03000340036" class="text-slate-300 hover:text-white">03000 340 036</a> · Email: <a href="mailto:recruiter@enlystnow.com" class="text-blue-400">recruiter@enlystnow.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+            <li><a href="foundation.html" class="hover:text-amber-400 transition">Foundation</a></li>
+            <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+            <li><a href="brand.html" class="hover:text-blue-400 transition">Brand System</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Ecosystem</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://enlystnow.com" target="_blank" rel="noopener" class="hover:text-blue-400 transition">enlyst (HR) ↗</a></li>
+            <li><a href="https://enlysum.com" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">enlysum (Finance) ↗</a></li>
+            <li><a href="https://enlybiz.com" target="_blank" rel="noopener" class="hover:text-amber-400 transition">enlybiz (Growth) ↗</a></li>
+            <li><a href="https://enlysoft.net" target="_blank" rel="noopener" class="hover:text-purple-400 transition">enlysoft (Cloud) ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Direct Contact</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="contact.html" class="text-blue-400 font-semibold hover:underline">Get in Touch →</a></li>
+            <li><a href="https://wa.me/923000340036" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">WhatsApp: 03000 340 036</a></li>
+            <li><a href="mailto:recruiter@enlystnow.com" class="hover:text-white">recruiter@enlystnow.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div>
+          &copy; 2026 Enlyst Foundation &amp; Smart Recruiting Pvt Ltd · Lahore, Punjab.
+        </div>
+        <div class="flex items-center gap-6 text-slate-500">
+          <span>Non-Commercial Research Mandate</span>
+          <span>Equal Opportunity Employer</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

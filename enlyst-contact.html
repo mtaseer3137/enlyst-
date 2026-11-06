@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us — Two Paths In, One Standard of Care Out | enlyst</title>
+  <meta name="description" content="Get in touch with Enlyst Smart Recruiting. Employers starting a search, candidates joining our talent pipeline, or submitting CVs. Lahore Stock Exchange Plaza."/>
+  <link rel="icon" href="assets/images/logo/enlyst-favicon.svg" type="image/svg+xml"/>
+
+  <!-- Bunny Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net"/>
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|inter:300,400,500,600,700|dm-mono:400,500,700&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              blue: '#2D5BE3',
+              green: '#1A7A4A',
+              amber: '#C4620A',
+              purple: '#6B3FA0',
+              obsidian: '#111111',
+              offwhite: '#F7F6F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="selection:bg-[#2D5BE3] selection:text-white">
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar border-b border-white/10 hidden sm:flex items-center justify-center gap-5 py-2 px-6 text-xs font-mono text-slate-400 bg-[#070912]/80 backdrop-blur-md">
+    <span>Part of the <a href="index.html" class="text-blue-400 font-bold hover:underline">Enlyst Framework ↗</a></span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Practice 01 · HR &amp; Talent</span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Lahore Stock Exchange Plaza</span>
+  </div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 navbar-blur border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-9 transition-transform duration-300 group-hover:scale-105" id="nav-brand-logo">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-[#507CF8] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#507CF8] transition-colors">About Us</a>
+        <a href="services.html" class="hover:text-[#507CF8] transition-colors">Services</a>
+        <a href="foundation.html" class="hover:text-[#507CF8] transition-colors">Foundation</a>
+        <a href="blog.html" class="hover:text-[#507CF8] transition-colors">Blog</a>
+        <a href="contact.html" class="text-[#507CF8] font-semibold border-b-2 border-[#2D5BE3] pb-1">Contact</a>
+        <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
+          Brand System ↗
+        </a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon text-amber-400 text-sm"></i>
+        </button>
+
+        <a href="tel:03000340036" class="btn-primary text-xs py-2.5">
+          <i class="fa-solid fa-phone text-xs"></i>
+          <span>03000 340 036</span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-toggle" class="p-2 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
+      <a href="index.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Home</a>
+      <a href="about.html" class="block text-slate-200 hover:text-[#507CF8] py-1">About Us</a>
+      <a href="services.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Services</a>
+      <a href="foundation.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Foundation</a>
+      <a href="blog.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Blog</a>
+      <a href="contact.html" class="block text-blue-400 font-bold py-1">Contact</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand System ↗</a>
+      <div class="pt-4">
+        <a href="tel:03000340036" class="btn-primary w-full py-3 text-center">
+          Call: 03000 340 036
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== CONTACT HEADER ==================== -->
+    <section class="relative pt-16 pb-12 overflow-hidden border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+          <i class="fa-solid fa-headset"></i> Initiate Dialogue
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-serif text-white leading-tight">
+          Two paths in. One standard of <span class="italic text-[#507CF8] font-serif">care out.</span>
+        </h1>
+        <p class="text-slate-300 text-base max-w-xl mx-auto font-sans leading-relaxed">
+          Every enquiry is read personally. Every response is specific, not templated.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== MAIN CONTACT GRID ==================== -->
+    <section class="py-20 bg-[#07090F] border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- LEFT COLUMN: DIRECT CONTACT & CLIENTS -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <a href="mailto:recruiter@enlystnow.com" class="glass-panel p-5 flex items-center gap-4 hover:border-blue-500/50 transition group">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg group-hover:scale-105 transition">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400 block uppercase">Official Email</span>
+                <span class="text-sm font-bold text-white group-hover:text-blue-400 transition">recruiter@enlystnow.com</span>
+              </div>
+            </a>
+
+            <a href="tel:03000340036" class="glass-panel p-5 flex items-center gap-4 hover:border-blue-500/50 transition group">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg group-hover:scale-105 transition">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400 block uppercase">Direct Line</span>
+                <span class="text-sm font-bold text-white group-hover:text-blue-400 transition">03000 340 036</span>
+              </div>
+            </a>
+
+            <div class="glass-panel p-5 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <span class="text-xs font-mono text-slate-400 block uppercase">Headquarters</span>
+                <span class="text-xs text-slate-200 block font-sans">
+                  Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000, Punjab, Pakistan
+                </span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Button -->
+            <a href="https://wa.me/923000340036" target="_blank" rel="noopener" class="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm flex items-center justify-center gap-2.5 transition shadow-lg">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Chat with Us on WhatsApp</span>
+            </a>
+
+            <!-- Client Logos Strip -->
+            <div class="pt-6 border-t border-white/10 space-y-3">
+              <p class="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+                Organisations We Have Worked With:
+              </p>
+              <div class="flex flex-wrap gap-2.5 text-xs font-serif text-slate-300">
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Alchemative</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Brickclay</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Paradigm</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Speridian Technologies</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Xeven Solutions</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Lambda Logics</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Eccountant</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Karkao Studios</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Orcalo</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">White Leaf</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Swift Securities</span>
+                <span class="px-3 py-1 rounded bg-white/5 border border-white/10">Adex 360</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: INTERACTIVE 3-TAB FORM -->
+          <div class="lg:col-span-7">
+            <div class="glass-panel p-6 sm:p-10 border-white/10 shadow-2xl relative">
+              
+              <h2 class="text-2xl font-serif text-white mb-1">Start a Conversation.</h2>
+              <p class="text-xs text-slate-400 font-sans mb-6">Tell us who you are and we will take it from there.</p>
+
+              <!-- Tabs Header -->
+              <div class="flex border-b border-white/10 mb-6 font-mono text-xs">
+                <button id="tab-btn-employer" onclick="setContactTab('employer')" class="px-4 py-2.5 font-bold border-b-2 border-blue-500 text-white transition">
+                  I'm an Employer
+                </button>
+                <button id="tab-btn-candidate" onclick="setContactTab('candidate')" class="px-4 py-2.5 font-medium border-b-2 border-transparent text-slate-400 hover:text-white transition">
+                  I'm a Candidate
+                </button>
+                <button id="tab-btn-cv" onclick="setContactTab('cv')" class="px-4 py-2.5 font-medium border-b-2 border-transparent text-slate-400 hover:text-white transition">
+                  Submit CV
+                </button>
+              </div>
+
+              <!-- FORM 1: EMPLOYER -->
+              <form id="contact-form-employer" onsubmit="event.preventDefault(); submitContactTab('employer');" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Your Name *</label>
+                    <input type="text" required placeholder="Full name" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Company Name *</label>
+                    <input type="text" required placeholder="Company name" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Work Email *</label>
+                    <input type="email" required placeholder="work@company.com" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Phone Number *</label>
+                    <input type="tel" required placeholder="03XX XXXXXXX" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Role(s) to Fill *</label>
+                  <input type="text" required placeholder="e.g. Senior Software Engineer, Head of Finance" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Industry</label>
+                    <select class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-blue-400 font-sans">
+                      <option>Technology &amp; Software</option>
+                      <option>Finance &amp; FinTech</option>
+                      <option>Healthcare</option>
+                      <option>Education</option>
+                      <option>Manufacturing &amp; Logistics</option>
+                      <option>Government &amp; Public Sector</option>
+                      <option>Marketing &amp; Media</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Hiring Urgency</label>
+                    <select class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-blue-400 font-sans">
+                      <option>Immediate (Within 2 weeks)</option>
+                      <option>Within a month</option>
+                      <option>1–3 months</option>
+                      <option>Confidential Executive Search</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Tell Us More (Optional)</label>
+                  <textarea rows="3" placeholder="Describe the role, team culture, compensation band, or any specific requirements..." class="w-full px-3.5 py-2 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-full py-3 text-xs justify-center font-bold">
+                  Submit Hiring Request →
+                </button>
+                <p class="text-[11px] font-mono text-slate-500 text-center">
+                  Reviewed within one business day · Strictly confidential under NDA
+                </p>
+              </form>
+
+              <!-- FORM 2: CANDIDATE -->
+              <form id="contact-form-candidate" onsubmit="event.preventDefault(); submitContactTab('candidate');" class="space-y-4 hidden">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Full Name *</label>
+                    <input type="text" required placeholder="Your name" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Phone Number *</label>
+                    <input type="tel" required placeholder="03XX XXXXXXX" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Email Address *</label>
+                    <input type="email" required placeholder="your@email.com" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Years of Experience</label>
+                    <select class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-blue-400 font-sans">
+                      <option>Fresh Graduate</option>
+                      <option>1–2 years</option>
+                      <option>3–5 years</option>
+                      <option>6–10 years</option>
+                      <option>10+ years (Executive/Staff+)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Current Role / Title</label>
+                    <input type="text" placeholder="e.g. Senior Backend Engineer" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Preferred Work Mode</label>
+                    <select class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-200 focus:outline-none focus:border-blue-400 font-sans">
+                      <option>Full-Time (Hybrid / Remote)</option>
+                      <option>Full-Time (Onsite)</option>
+                      <option>Contract / Advisory</option>
+                      <option>Open to Any</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Career Ambition / Notes</label>
+                  <textarea rows="3" placeholder="Tell us about the roles, tech stacks, or environments where you thrive..." class="w-full px-3.5 py-2 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-full py-3 text-xs justify-center font-bold">
+                  Join The Pipeline →
+                </button>
+                <p class="text-[11px] font-mono text-slate-500 text-center">
+                  Your profile is confidential · Shared only with your direct consent
+                </p>
+              </form>
+
+              <!-- FORM 3: SUBMIT CV -->
+              <form id="contact-form-cv" onsubmit="event.preventDefault(); submitContactTab('cv');" class="space-y-4 hidden">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Full Name *</label>
+                    <input type="text" required placeholder="Your name" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono text-slate-300 mb-1">Email Address *</label>
+                    <input type="email" required placeholder="your@email.com" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Current Role / Specialty</label>
+                  <input type="text" placeholder="e.g. Principal Quant Developer, Rust Systems" class="w-full px-3.5 py-2.5 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans">
+                </div>
+
+                <!-- CV Dropzone -->
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Attach Resume / CV *</label>
+                  <div onclick="document.getElementById('cv-file-upload').click();" class="border-2 border-dashed border-white/20 hover:border-blue-400 bg-slate-900/60 rounded-xl p-6 text-center cursor-pointer transition">
+                    <input type="file" id="cv-file-upload" class="hidden" accept=".pdf,.doc,.docx" onchange="handleCvFileSelect(this);">
+                    <div id="cv-dropzone-label">
+                      <i class="fa-solid fa-cloud-arrow-up text-blue-400 text-2xl mb-2"></i>
+                      <p class="text-xs font-mono text-slate-200">Click or drag your CV here (PDF, DOCX)</p>
+                      <span class="text-[10px] font-mono text-slate-500">Confidential · AI-parsed with human oversight</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono text-slate-300 mb-1">Additional Context (Optional)</label>
+                  <textarea rows="2" placeholder="Target salary range, notice period, or relocation preferences..." class="w-full px-3.5 py-2 bg-slate-900 border border-white/10 rounded-lg text-xs text-slate-100 focus:outline-none focus:border-blue-400 font-sans"></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-full py-3 text-xs justify-center font-bold">
+                  Submit My CV →
+                </button>
+                <p class="text-[11px] font-mono text-slate-500 text-center">
+                  Reviewed within 48 hours by our senior recruitment team
+                </p>
+              </form>
+
+              <!-- SUCCESS MESSAGE CONTAINER -->
+              <div id="contact-success-panel" class="hidden text-center py-10 space-y-3">
+                <div class="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mx-auto">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-2xl font-serif text-white">Message Received.</h3>
+                <p class="text-xs text-slate-300 font-sans max-w-sm mx-auto leading-relaxed" id="contact-success-desc">
+                  An Enlyst partner will contact you directly within one business day.
+                </p>
+                <button onclick="resetContactForms()" class="text-xs font-mono text-blue-400 hover:underline pt-2">
+                  ← Submit another enquiry
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-[#07090F] text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-8">
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Smart Recruiting &amp; HR Intelligence · Practice 01 of the Enlyst Framework. Systems protect processes so humans can protect humans.
+          </p>
+          <div class="pt-1 text-xs font-mono text-slate-500 space-y-1">
+            <p>Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000</p>
+            <p>Phone: <a href="tel:03000340036" class="text-slate-300 hover:text-white">03000 340 036</a> · Email: <a href="mailto:recruiter@enlystnow.com" class="text-blue-400">recruiter@enlystnow.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+            <li><a href="foundation.html" class="hover:text-blue-400 transition">Foundation</a></li>
+            <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+            <li><a href="brand.html" class="hover:text-blue-400 transition">Brand System</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Ecosystem</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://enlystnow.com" target="_blank" rel="noopener" class="hover:text-blue-400 transition">enlyst (HR) ↗</a></li>
+            <li><a href="https://enlysum.com" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">enlysum (Finance) ↗</a></li>
+            <li><a href="https://enlybiz.com" target="_blank" rel="noopener" class="hover:text-amber-400 transition">enlybiz (Growth) ↗</a></li>
+            <li><a href="https://enlysoft.net" target="_blank" rel="noopener" class="hover:text-purple-400 transition">enlysoft (Cloud) ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Direct Contact</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="contact.html" class="text-blue-400 font-semibold hover:underline">Get in Touch →</a></li>
+            <li><a href="https://wa.me/923000340036" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">WhatsApp: 03000 340 036</a></li>
+            <li><a href="mailto:recruiter@enlystnow.com" class="hover:text-white">recruiter@enlystnow.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div>
+          &copy; 2026 Enlyst Smart Recruiting Pvt Ltd · Lahore Stock Exchange Plaza.
+        </div>
+        <div class="flex items-center gap-6 text-slate-500">
+          <span>Non-Disclosure Protected</span>
+          <span>Equal Opportunity Employer</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    function setContactTab(tabName) {
+      const tabs = ['employer', 'candidate', 'cv'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-btn-${t}`);
+        const form = document.getElementById(`contact-form-${t}`);
+        if (t === tabName) {
+          btn.classList.add('border-blue-500', 'text-white', 'font-bold');
+          btn.classList.remove('border-transparent', 'text-slate-400');
+          form.classList.remove('hidden');
+        } else {
+          btn.classList.remove('border-blue-500', 'text-white', 'font-bold');
+          btn.classList.add('border-transparent', 'text-slate-400');
+          form.classList.add('hidden');
+        }
+      });
+      document.getElementById('contact-success-panel').classList.add('hidden');
+    }
+
+    function submitContactTab(tabName) {
+      const form = document.getElementById(`contact-form-${tabName}`);
+      form.classList.add('hidden');
+      const success = document.getElementById('contact-success-panel');
+      const desc = document.getElementById('contact-success-desc');
+      if (tabName === 'employer') {
+        desc.textContent = "Hiring request received. A dedicated Enlyst account recruiter will contact you within one business day.";
+      } else if (tabName === 'candidate') {
+        desc.textContent = "Profile received and added to our confidential talent pool. We'll connect when an exact match opens.";
+      } else {
+        desc.textContent = "CV received. Our senior screening team will review your qualifications within 48 hours.";
+      }
+      success.classList.remove('hidden');
+      showToast("🚀 Form submitted successfully!");
+    }
+
+    function resetContactForms() {
+      setContactTab('employer');
+    }
+
+    function handleCvFileSelect(input) {
+      if (input.files && input.files[0]) {
+        document.getElementById('cv-dropzone-label').innerHTML = `
+          <i class="fa-solid fa-file-circle-check text-emerald-400 text-2xl mb-2"></i>
+          <p class="text-xs font-mono text-emerald-400 font-bold">${input.files[0].name}</p>
+          <span class="text-[10px] font-mono text-slate-400">Ready for submission</span>
+        `;
+        showToast("✓ File attached: " + input.files[0].name);
+      }
+    }
+
+    // Auto-select tab based on URL param ?type=...
+    const urlParams = new URLSearchParams(window.location.search);
+    const typeParam = urlParams.get('type') || urlParams.get('tab');
+    if (typeParam && ['employer', 'candidate', 'cv'].includes(typeParam)) {
+      setContactTab(typeParam);
+    }
+  </script>
+</body>
+</html>

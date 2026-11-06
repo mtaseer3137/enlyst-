@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — Three Services, One Standard of Rigour | enlyst</title>
+  <meta name="description" content="Hiring & Recruitment, Executive Search, Performance Management, and Training — three services built for growing organisations. Premier Recruitment Agency, Lahore."/>
+  <link rel="icon" href="assets/images/logo/enlyst-favicon.svg" type="image/svg+xml"/>
+
+  <!-- Bunny Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net"/>
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|inter:300,400,500,600,700|dm-mono:400,500,700&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              blue: '#2D5BE3',
+              green: '#1A7A4A',
+              amber: '#C4620A',
+              purple: '#6B3FA0',
+              obsidian: '#111111',
+              offwhite: '#F7F6F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="selection:bg-[#2D5BE3] selection:text-white">
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar border-b border-white/10 hidden sm:flex items-center justify-center gap-5 py-2 px-6 text-xs font-mono text-slate-400 bg-[#070912]/80 backdrop-blur-md">
+    <span>Part of the <a href="index.html" class="text-blue-400 font-bold hover:underline">Enlyst Framework ↗</a></span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Practice 01 · HR &amp; Talent</span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Lahore Stock Exchange Plaza</span>
+  </div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 navbar-blur border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-9 transition-transform duration-300 group-hover:scale-105" id="nav-brand-logo">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-[#507CF8] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#507CF8] transition-colors">About Us</a>
+        <a href="services.html" class="text-[#507CF8] font-semibold border-b-2 border-[#2D5BE3] pb-1">Services</a>
+        <a href="foundation.html" class="hover:text-[#507CF8] transition-colors">Foundation</a>
+        <a href="blog.html" class="hover:text-[#507CF8] transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-[#507CF8] transition-colors">Contact</a>
+        <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
+          Brand System ↗
+        </a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon text-amber-400 text-sm"></i>
+        </button>
+
+        <a href="contact.html?type=employer" class="btn-primary">
+          <span>Start a Search</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-toggle" class="p-2 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
+      <a href="index.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Home</a>
+      <a href="about.html" class="block text-slate-200 hover:text-[#507CF8] py-1">About Us</a>
+      <a href="services.html" class="block text-blue-400 font-bold py-1">Services</a>
+      <a href="foundation.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Foundation</a>
+      <a href="blog.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Blog</a>
+      <a href="contact.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Contact</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand System ↗</a>
+      <div class="pt-4">
+        <a href="contact.html?type=employer" class="btn-primary w-full py-3 text-center">
+          Start a Search
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-16 pb-20 overflow-hidden border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+              <i class="fa-solid fa-cubes"></i> What We Deliver
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-serif text-white leading-[1.08]">
+              Three services.<br/>
+              <span class="italic text-[#507CF8] font-serif">One standard</span> of rigour.
+            </h1>
+            <p class="text-lg text-slate-300 font-sans leading-relaxed max-w-2xl">
+              Providing you with premium HR and administration services. We use data science and cloud technology to take your hiring to the next level — making life easier for both job-seekers and employers.
+            </p>
+          </div>
+
+          <div class="lg:col-span-5 space-y-3">
+            <div class="glass-panel p-5 flex items-center gap-5 border-white/10">
+              <div class="text-4xl font-serif text-blue-400 flex-shrink-0">−24%</div>
+              <p class="text-xs text-slate-300 font-sans leading-relaxed">
+                Average reduction in time-to-hire across retained-search engagements vs client's prior process.
+              </p>
+            </div>
+
+            <div class="glass-panel p-5 flex items-center gap-5 border-white/10">
+              <div class="text-4xl font-serif text-emerald-400 flex-shrink-0">95%</div>
+              <p class="text-xs text-slate-300 font-sans leading-relaxed">
+                Hiring managers rating placements as strong or excellent at the 90-day post-placement review.
+              </p>
+            </div>
+
+            <div class="glass-panel p-5 flex items-center gap-5 border-white/10">
+              <div class="text-4xl font-serif text-amber-400 flex-shrink-0">&lt;4%</div>
+              <p class="text-xs text-slate-300 font-sans leading-relaxed">
+                Early turnover rate across all Enlyst placements — vs an industry benchmark above 20%.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICE 01: HIRING & RECRUITMENT ==================== -->
+    <section class="py-24 border-b border-white/10" id="hiring">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-blue-400">
+              Service 01 / Hiring &amp; Executive Recruitment
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-serif text-white">
+              Hire with <em class="italic text-[#507CF8] font-serif">intelligence</em>, not instinct.
+            </h2>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              Enlyst Smart Recruiting excels in executive searches, specialising in C-level and Staff+ engineering roles — particularly in the fast-paced tech and AI sector. Our team handles demanding HR assignments with precision. Committed to bias-free recruitment, we leverage agentic sourcing and data science to produce mutually beneficial outcomes for employers and candidates.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 font-sans">
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>Role architecture and calibrated job description design before any sourcing begins</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>Active multi-channel passive pipeline discovery — not passive job-board posting</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>Competency-based behavioural screening with pre-set rubrics locked before interviews</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>Anonymised candidate dossiers — presenting a structured case, not a forwarded CV</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>Interview coordination, structured feedback loops, offer closing & counter-offer insulation</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>EOBI and Social Security compliance on every employment contract</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 flex-shrink-0"></span>
+                <span>30-day and 90-day post-placement accountability check-ins</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs font-mono">Agentic Sourcing</span>
+              <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs font-mono">Behavioural Science</span>
+              <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs font-mono">EOBI Compliant</span>
+              <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 text-xs font-mono">90-Day Guarantee</span>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?service=hiring" class="btn-primary">
+                <span>Start a Search</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Visual 6-step Pipeline Panel -->
+          <div class="lg:col-span-5">
+            <div class="glass-panel p-8 border-white/10 relative overflow-hidden">
+              <span class="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-6">
+                Recruitment Pipeline Architecture
+              </span>
+
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">01</span>
+                  <span class="text-slate-200">Role Brief &amp; Sourcing Strategy</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">02</span>
+                  <span class="text-slate-200">Active Pipeline Discovery</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">03</span>
+                  <span class="text-slate-200">Behavioural Screening</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">04</span>
+                  <span class="text-slate-200">Anonymised Shortlist Dossiers</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">05</span>
+                  <span class="text-slate-200">Interview &amp; Offer Coordination</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-blue-400 font-bold">06</span>
+                  <span class="text-slate-200">Post-Placement Accountability</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <div class="text-3xl font-serif text-white">100%</div>
+                  <div class="text-[10px] font-mono uppercase text-slate-400">Documented Process</div>
+                </div>
+                <span class="text-xs font-mono text-emerald-400">Auditable At Every Step</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICE 02: PERFORMANCE MANAGEMENT ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10" id="performance">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left: 6-step Cycle Panel -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="glass-panel p-8 border-emerald-500/30 relative overflow-hidden">
+              <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 block mb-6">
+                Continuous Performance Cycle
+              </span>
+
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">01</span>
+                  <span class="text-slate-200">Role Mapping &amp; KPI Design</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">02</span>
+                  <span class="text-slate-200">Manager Goal-Setting Sessions</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">03</span>
+                  <span class="text-slate-200">Mid-Cycle Check-In</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">04</span>
+                  <span class="text-slate-200">360 Feedback Collection</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">05</span>
+                  <span class="text-slate-200">Structured Appraisal Review</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-emerald-400 font-bold">06</span>
+                  <span class="text-slate-200">Development Planning</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <div class="text-3xl font-serif text-emerald-400">Clarity</div>
+                  <div class="text-[10px] font-mono uppercase text-slate-400">Quarterly Cadence</div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">Burnout-Free Cadence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Text Description -->
+          <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400">
+              Service 02 / Performance Management
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-serif text-white">
+              Clarity for your people. <em class="italic text-emerald-400 font-serif">Output for yours</em>.
+            </h2>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              Our performance management approach seamlessly integrates data science, ensuring a cutting-edge and results-driven experience. We personalize frameworks to individual strengths, predict skill gaps before they bottleneck roadmaps, and assess whole-person productivity without inducing burnout.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 font-sans">
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>Role-specific KPI architecture designed alongside department managers</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>Quarterly and annual appraisal framework design and company-wide rollout</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>360-degree feedback structures across peers, managers, and direct reports</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>Performance Improvement Plan (PIP) templates with constructive manager coaching</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>Manager training workshops on delivering structured, bias-aware feedback</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 flex-shrink-0"></span>
+                <span>Integration with HR analytics dashboards and Recruiter OS pipeline reporting</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">KPI Architecture</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">360 Feedback</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">PIP Templates</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-xs font-mono">Dashboard Ready</span>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?service=performance" class="btn-primary" style="background:#1A7A4A;">
+                <span>Discuss Your Needs</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SERVICE 03: TRAINING & DEVELOPMENT ==================== -->
+    <section class="py-24 border-b border-white/10" id="training">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400">
+              Service 03 / Training &amp; Workforce Development
+            </div>
+
+            <h2 class="text-3xl sm:text-5xl font-serif text-white">
+              Learning built on <em class="italic text-amber-400 font-serif">evidence</em>, not assumption.
+            </h2>
+
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              In a fiercely competitive business landscape, Enlyst prioritises talent retention, employee confidence, and amplified returns. Remarkably, <strong>93% of employees express a willingness to prolong their tenure</strong> with a company genuinely invested in their development. We build customized learning strategies that boost retention and measurably elevate performance.
+            </p>
+
+            <ul class="space-y-2.5 text-xs text-slate-300 font-sans">
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>Onboarding curriculum design and facilitator-guided cohort delivery</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>AI literacy training programmes directly aligned with Pakistan's National AI Policy 2025</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>HR compliance, employment contracts, and labour law awareness workshops</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>Leadership readiness and management capability acceleration</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>Government and public-sector digital training delivery (GovTech)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 flex-shrink-0"></span>
+                <span>Rigorous post-training evaluation and impact measurement reporting</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs font-mono">AI Literacy</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs font-mono">GovTech Delivery</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs font-mono">Impact Measurement</span>
+              <span class="px-2.5 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs font-mono">GITTC Field Tested</span>
+            </div>
+
+            <div class="pt-3">
+              <a href="contact.html?service=training" class="btn-primary" style="background:#C4620A;">
+                <span>Plan a Programme</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Visual 6-step Training Framework Panel -->
+          <div class="lg:col-span-5">
+            <div class="glass-panel p-8 border-amber-500/30 relative overflow-hidden">
+              <span class="text-xs font-mono uppercase tracking-widest text-amber-400 block mb-6">
+                Training &amp; Academy Framework
+              </span>
+
+              <div class="space-y-3 font-mono text-xs">
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">01</span>
+                  <span class="text-slate-200">Needs Assessment &amp; Gap Analysis</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">02</span>
+                  <span class="text-slate-200">Custom Curriculum Design</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">03</span>
+                  <span class="text-slate-200">Facilitator Training &amp; Delivery</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">04</span>
+                  <span class="text-slate-200">Participant Assessment</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">05</span>
+                  <span class="text-slate-200">Continuous Feedback Collection</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900 border border-white/10 flex items-center gap-3">
+                  <span class="text-amber-400 font-bold">06</span>
+                  <span class="text-slate-200">Impact Measurement Report</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <div class="text-3xl font-serif text-amber-400">93%</div>
+                  <div class="text-[10px] font-mono uppercase text-slate-400">Employee Retention</div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">Proven ROI Lift</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 3 ENGAGEMENT MODELS ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10" id="models">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+            <i class="fa-solid fa-handshake"></i> How We Engage
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            Three Engagement <span class="italic text-[#507CF8]">Models</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            Tell us your situation and we will recommend the right structure. Every model includes our full documented process — the difference is scope, dedicated bandwidth, and duration.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Model 1: Contingency -->
+          <div class="glass-card-interactive p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 px-3 py-1 rounded bg-white/5 border border-white/10 inline-block mb-4">
+                Contingency
+              </span>
+              <h3 class="text-2xl font-serif text-white mb-2">Per Placement</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-6 font-sans">
+                Pay on successful placement. Ideal for organizations with occasional hiring needs and well-defined single roles.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-300 font-sans mb-6">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Single role at a time</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Full documented pipeline</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Structured shortlist dossier</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> 30-day placement guarantee</li>
+              </ul>
+            </div>
+            <a href="contact.html?model=contingency" class="btn-secondary w-full py-2.5 text-xs text-center justify-center">
+              Enquire →
+            </a>
+          </div>
+
+          <!-- Model 2: Retained Search (Recommended) -->
+          <div class="glass-card-interactive p-8 flex flex-col justify-between border-blue-500/50 bg-[#2D5BE3]/10 relative shadow-2xl">
+            <div class="absolute -top-3 right-6 bg-[#2D5BE3] text-white text-[10px] font-mono uppercase tracking-widest px-3 py-0.5 rounded-full font-bold">
+              Recommended
+            </div>
+            <div>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-300 px-3 py-1 rounded bg-blue-500/20 border border-blue-500/30 inline-block mb-4">
+                Retained Search
+              </span>
+              <h3 class="text-2xl font-serif text-white mb-2">Dedicated Recruiter</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-6 font-sans">
+                For strategic or ongoing hiring. Dedicated recruiter, priority passive pipeline, and end-to-end process ownership across multiple critical hires.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-200 font-sans mb-6">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Dedicated account recruiter</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Multiple simultaneous searches</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Weekly pipeline &amp; metric reporting</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> 90-day post-placement follow-up &amp; replacement</li>
+              </ul>
+            </div>
+            <a href="contact.html?model=retained" class="btn-primary w-full py-2.5 text-xs text-center justify-center">
+              Start Conversation →
+            </a>
+          </div>
+
+          <!-- Model 3: Advisory -->
+          <div class="glass-card-interactive p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 px-3 py-1 rounded bg-white/5 border border-white/10 inline-block mb-4">
+                Advisory
+              </span>
+              <h3 class="text-2xl font-serif text-white mb-2">HR Consultancy</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-6 font-sans">
+                Process design, KPI performance systems, and compliance — for organizations building long-term infrastructure without a specific open vacancy.
+              </p>
+              <ul class="space-y-2 text-xs text-slate-300 font-sans mb-6">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> HR audit and structural gap analysis</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Policy manual &amp; contract design</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Performance framework build</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400"></i> Onsite leadership training delivery</li>
+              </ul>
+            </div>
+            <a href="contact.html?model=advisory" class="btn-secondary w-full py-2.5 text-xs text-center justify-center">
+              Enquire →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CTA BAND ==================== -->
+    <section class="py-24 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+          Ready to start a search or <br>
+          <span class="italic text-[#507CF8] font-serif">build your HR system?</span>
+        </h2>
+        <p class="text-slate-300 text-base max-w-xl mx-auto">
+          Two paths in. One standard of work out.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="contact.html?type=employer" class="btn-primary px-8 py-3.5 text-sm">
+            I'm an Employer →
+          </a>
+          <a href="contact.html?type=candidate" class="btn-secondary px-8 py-3.5 text-sm">
+            I'm a Candidate →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-[#07090F] text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-8">
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Smart Recruiting &amp; HR Intelligence · Practice 01 of the Enlyst Framework. Systems protect processes so humans can protect humans.
+          </p>
+          <div class="pt-1 text-xs font-mono text-slate-500 space-y-1">
+            <p>Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000</p>
+            <p>Phone: <a href="tel:03000340036" class="text-slate-300 hover:text-white">03000 340 036</a> · Email: <a href="mailto:recruiter@enlystnow.com" class="text-blue-400">recruiter@enlystnow.com</a></p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+            <li><a href="foundation.html" class="hover:text-blue-400 transition">Foundation</a></li>
+            <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+            <li><a href="brand.html" class="hover:text-blue-400 transition">Brand System</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Ecosystem</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://enlystnow.com" target="_blank" rel="noopener" class="hover:text-blue-400 transition">enlyst (HR) ↗</a></li>
+            <li><a href="https://enlysum.com" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">enlysum (Finance) ↗</a></li>
+            <li><a href="https://enlybiz.com" target="_blank" rel="noopener" class="hover:text-amber-400 transition">enlybiz (Growth) ↗</a></li>
+            <li><a href="https://enlysoft.net" target="_blank" rel="noopener" class="hover:text-purple-400 transition">enlysoft (Cloud) ↗</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Direct Contact</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="contact.html" class="text-blue-400 font-semibold hover:underline">Get in Touch →</a></li>
+            <li><a href="https://wa.me/923000340036" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">WhatsApp: 03000 340 036</a></li>
+            <li><a href="mailto:recruiter@enlystnow.com" class="hover:text-white">recruiter@enlystnow.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div>
+          &copy; 2026 Enlyst Smart Recruiting Pvt Ltd · Lahore Stock Exchange Plaza.
+        </div>
+        <div class="flex items-center gap-6 text-slate-500">
+          <span>Non-Disclosure Protected</span>
+          <span>Equal Opportunity Employer</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -63,15 +63,13 @@
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#vision" class="hover:text-[#507CF8] transition-colors">Our Vision</a>
-        <a href="#divisions" class="hover:text-[#507CF8] transition-colors">Four Divisions</a>
-        <a href="#sniper-ai" class="hover:text-[#507CF8] transition-colors flex items-center gap-1.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Sniper AI™</span>
-        </a>
-        <a href="#rpo-talent" class="hover:text-[#507CF8] transition-colors">Talent & RPO</a>
-        <a href="#roi-calculator" class="hover:text-[#507CF8] transition-colors">Cost Calculator</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="index.html" class="text-blue-400 font-semibold">Home</a>
+        <a href="about.html" class="hover:text-[#507CF8] transition-colors">About</a>
+        <a href="services.html" class="hover:text-[#507CF8] transition-colors">Services</a>
+        <a href="foundation.html" class="hover:text-[#507CF8] transition-colors">Foundation</a>
+        <a href="blog.html" class="hover:text-[#507CF8] transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-[#507CF8] transition-colors">Contact</a>
         <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
           Brand System ↗
         </a>
@@ -85,10 +83,10 @@
         </button>
 
         <!-- Discovery Call CTA Button -->
-        <button onclick="openModal('consultation-modal')" class="btn-primary">
-          <span>Enlist With Us</span>
+        <a href="contact.html?type=employer" class="btn-primary">
+          <span>Start a Search</span>
           <i class="fa-solid fa-arrow-right text-xs"></i>
-        </button>
+        </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
@@ -101,16 +99,17 @@
 
     <!-- Mobile Drawer Navigation -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
-      <a href="#vision" class="block text-slate-200 hover:text-[#507CF8] py-1">Our Vision</a>
-      <a href="#divisions" class="block text-slate-200 hover:text-[#507CF8] py-1">Four Divisions</a>
-      <a href="#sniper-ai" class="block text-slate-200 hover:text-[#507CF8] py-1">Sniper AI™ Solution</a>
-      <a href="#rpo-talent" class="block text-slate-200 hover:text-[#507CF8] py-1">Talent & RPO</a>
-      <a href="#roi-calculator" class="block text-slate-200 hover:text-[#507CF8] py-1">Cost Savings Calculator</a>
-      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand Guidelines & Logos ↗</a>
-      <div class="pt-4 flex flex-col gap-3">
-        <button onclick="openModal('consultation-modal')" class="btn-primary w-full py-3">
-          Enlist With Us
-        </button>
+      <a href="index.html" class="block text-blue-400 font-bold py-1">Home</a>
+      <a href="about.html" class="block text-slate-200 hover:text-[#507CF8] py-1">About Us</a>
+      <a href="services.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Services</a>
+      <a href="foundation.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Foundation</a>
+      <a href="blog.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Blog</a>
+      <a href="contact.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Contact</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand System ↗</a>
+      <div class="pt-4">
+        <a href="contact.html?type=employer" class="btn-primary w-full py-3 text-center">
+          Start a Search
+        </a>
       </div>
     </div>
   </header>
@@ -254,23 +253,46 @@
       <!-- Hero Statistics Bar -->
       <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10 font-mono">
         <div class="text-center sm:text-left">
-          <div class="text-3xl sm:text-4xl font-serif text-[#507CF8]">15%–35%</div>
-          <div class="text-xs text-slate-400 mt-1">Average Cost-Per-Hire Saved</div>
+          <div class="text-3xl sm:text-4xl font-serif text-[#507CF8]">−24%</div>
+          <div class="text-xs text-slate-400 mt-1">Average Time-to-Hire Reduction</div>
         </div>
         <div class="text-center sm:text-left">
-          <div class="text-3xl sm:text-4xl font-serif text-emerald-400">14 Days</div>
-          <div class="text-xs text-slate-400 mt-1">Avg. Sourcing to Offer Window</div>
+          <div class="text-3xl sm:text-4xl font-serif text-emerald-400">95%</div>
+          <div class="text-xs text-slate-400 mt-1">Quality of Hire (90-Day Rating)</div>
         </div>
         <div class="text-center sm:text-left">
-          <div class="text-3xl sm:text-4xl font-serif text-amber-400">4 Divisions</div>
-          <div class="text-xs text-slate-400 mt-1">People • Money • Growth • Tech</div>
+          <div class="text-3xl sm:text-4xl font-serif text-amber-400">&lt;4%</div>
+          <div class="text-xs text-slate-400 mt-1">Early Turnover (vs 20% Industry)</div>
         </div>
         <div class="text-center sm:text-left">
-          <div class="text-3xl sm:text-4xl font-serif text-purple-400">100% Guaranteed</div>
-          <div class="text-xs text-slate-400 mt-1">90-Day Placement Retention</div>
+          <div class="text-3xl sm:text-4xl font-serif text-purple-400">350+</div>
+          <div class="text-xs text-slate-400 mt-1">Organisations Served Across 6 Yrs</div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ==================== ORGANISATIONS WE'VE WORKED WITH ==================== -->
+  <section class="py-12 border-b border-white/10 bg-[#07090F]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-[10px] font-mono uppercase tracking-widest text-slate-400 text-center mb-6">
+        Organisations We Have Worked With Across Pakistan &amp; Global Tech:
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-sm font-serif text-slate-300">
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Alchemative</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Brickclay</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Paradigm</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Speridian Technologies</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Xeven Solutions</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Lambda Logics</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Eccountant</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Karkao Studios</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Orcalo</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">White Leaf</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Swift Securities</span>
+        <span class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/40 hover:text-white transition">Adex 360</span>
+      </div>
     </div>
   </section>
 
@@ -831,39 +853,51 @@
           </div>
         </div>
 
+        <!-- Navigation & Pages -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-[#507CF8] transition">About Us & Creed</a></li>
+            <li><a href="services.html" class="hover:text-[#507CF8] transition">Services & Engagements</a></li>
+            <li><a href="foundation.html" class="hover:text-[#507CF8] transition">Himat-Hikmat Foundation</a></li>
+            <li><a href="blog.html" class="hover:text-[#507CF8] transition">Blog & Research</a></li>
+            <li><a href="contact.html" class="hover:text-[#507CF8] transition">Contact & Office</a></li>
+            <li><a href="brand.html" class="hover:text-[#507CF8] transition">Brand Guidelines & Assets</a></li>
+          </ul>
+        </div>
+
         <!-- The 4 Divisions -->
         <div>
           <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Four Divisions</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#divisions" class="hover:text-blue-400 transition">enlyst (HR & Talent)</a></li>
-            <li><a href="#divisions" class="hover:text-emerald-400 transition">enlysum (Finance & Accounting)</a></li>
-            <li><a href="#divisions" class="hover:text-amber-400 transition">enlybiz (Marketing & Growth)</a></li>
-            <li><a href="#divisions" class="hover:text-purple-400 transition">enlysoft (Cloud & Tech)</a></li>
+            <li><a href="services.html" class="hover:text-blue-400 transition font-mono">enlyst <span class="text-slate-500 font-sans">(HR & Talent)</span></a></li>
+            <li><a href="services.html#practices" class="hover:text-emerald-400 transition font-mono">enlysum <span class="text-slate-500 font-sans">(Finance)</span></a></li>
+            <li><a href="services.html#practices" class="hover:text-amber-400 transition font-mono">enlybiz <span class="text-slate-500 font-sans">(Marketing)</span></a></li>
+            <li><a href="services.html#practices" class="hover:text-purple-400 transition font-mono">enlysoft <span class="text-slate-500 font-sans">(Cloud Tech)</span></a></li>
           </ul>
         </div>
 
-        <!-- Core Solutions -->
+        <!-- Corporate Entity & Contact -->
         <div>
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Solutions</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="#sniper-ai" class="hover:text-blue-400 transition">Sniper AI™ Sourcing</a></li>
-            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Recruitment Outsourcing (RPO)</a></li>
-            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Performance Reviews & Coaching</a></li>
-            <li><a href="#rpo-talent" class="hover:text-blue-400 transition">Training Academy & CBAP®</a></li>
-            <li><a href="#roi-calculator" class="hover:text-blue-400 transition">Hiring Cost Calculator</a></li>
-          </ul>
-        </div>
-
-        <!-- Corporate Entity -->
-        <div>
-          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Entity Notice</h4>
-          <p class="text-xs text-slate-400 leading-relaxed mb-2">
-            <strong class="text-slate-200">Legal Entity:</strong><br>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Office & Direct</h4>
+          <p class="text-xs text-slate-300 leading-relaxed mb-2 font-medium">
             Enlyst Smart Recruiting Pvt Ltd
           </p>
-          <p class="text-[11px] text-slate-500 font-mono">
-            Domains: enlystnow.com • enlysum.com • enlybiz.com • enlysoft.net
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">
+            Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000
           </p>
+          <div class="space-y-1.5 text-xs font-mono">
+            <div>
+              <a href="https://wa.me/923000340036" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1.5">
+                <i class="fa-brands fa-whatsapp text-sm"></i> 03000 340 036
+              </a>
+            </div>
+            <div>
+              <a href="mailto:recruiter@enlystnow.com" class="text-[#507CF8] hover:underline flex items-center gap-1.5">
+                <i class="fa-regular fa-envelope text-xs"></i> recruiter@enlystnow.com
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

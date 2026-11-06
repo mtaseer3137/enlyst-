@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — The Architects | enlyst · Smart Recruiting</title>
+  <meta name="description" content="Why Enlyst exists, what we believe, and how we build systems that protect people. The philosophy, vision, mission, and 5 non-negotiable values of Enlyst Smart Recruiting."/>
+  <link rel="icon" href="assets/images/logo/enlyst-favicon.svg" type="image/svg+xml"/>
+
+  <!-- Bunny Fonts (Official Brand Guideline Spec & Pakistan-Safe) -->
+  <link rel="preconnect" href="https://fonts.bunny.net"/>
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|inter:300,400,500,600,700|dm-mono:400,500,700&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              blue: '#2D5BE3',
+              green: '#1A7A4A',
+              amber: '#C4620A',
+              purple: '#6B3FA0',
+              obsidian: '#111111',
+              offwhite: '#F7F6F3',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="selection:bg-[#2D5BE3] selection:text-white">
+
+  <!-- ==================== TOPBAR ==================== -->
+  <div class="topbar border-b border-white/10 hidden sm:flex items-center justify-center gap-5 py-2 px-6 text-xs font-mono text-slate-400 bg-[#070912]/80 backdrop-blur-md">
+    <span>Part of the <a href="index.html" class="text-blue-400 font-bold hover:underline">Enlyst Framework ↗</a></span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Practice 01 · HR &amp; Talent</span>
+    <span class="w-1 h-1 rounded-full bg-blue-500"></span>
+    <span>Lahore Stock Exchange Plaza</span>
+  </div>
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <header class="sticky top-0 z-50 navbar-blur border-b transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-9 transition-transform duration-300 group-hover:scale-105" id="nav-brand-logo">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="index.html" class="hover:text-[#507CF8] transition-colors">Home</a>
+        <a href="about.html" class="text-[#507CF8] font-semibold border-b-2 border-[#2D5BE3] pb-1">About Us</a>
+        <a href="services.html" class="hover:text-[#507CF8] transition-colors">Services</a>
+        <a href="foundation.html" class="hover:text-[#507CF8] transition-colors">Foundation</a>
+        <a href="blog.html" class="hover:text-[#507CF8] transition-colors">Blog</a>
+        <a href="contact.html" class="hover:text-[#507CF8] transition-colors">Contact</a>
+        <a href="brand.html" class="text-xs font-mono px-2.5 py-1 rounded bg-white/5 border border-white/10 hover:border-blue-400 text-blue-300 transition">
+          Brand System ↗
+        </a>
+      </nav>
+
+      <!-- Action Items & CTAs -->
+      <div class="hidden md:flex items-center gap-4">
+        <button id="theme-toggle-btn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon text-amber-400 text-sm"></i>
+        </button>
+
+        <a href="contact.html" class="btn-primary">
+          <span>Initiate Contact</span>
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="mobile-menu-toggle" class="p-2 text-slate-300 hover:text-white focus:outline-none">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 space-y-4 border-b border-white/10 bg-[#0A0D14]">
+      <a href="index.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Home</a>
+      <a href="about.html" class="block text-blue-400 font-bold py-1">About Us</a>
+      <a href="services.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Services</a>
+      <a href="foundation.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Foundation</a>
+      <a href="blog.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Blog</a>
+      <a href="contact.html" class="block text-slate-200 hover:text-[#507CF8] py-1">Contact</a>
+      <a href="brand.html" class="block text-blue-400 font-mono text-xs py-1">Brand System ↗</a>
+      <div class="pt-4">
+        <a href="contact.html" class="btn-primary w-full py-3 text-center">
+          Initiate Contact
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-16 pb-24 overflow-hidden border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping"></span>
+              About Us · The Architects
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-serif text-white leading-[1.08]">
+              We exist to build systems so humans can be <span class="italic text-[#507CF8] font-serif">good to each other.</span>
+            </h1>
+
+            <p class="text-lg text-slate-300 font-sans leading-relaxed max-w-2xl">
+              Enlyst began as a question: <strong>why does hiring in Pakistan still run on referrals, gut feel, and informal trust?</strong> We exist because the answer demanded a different kind of firm — one where behavioural science, auditable documentation, and predictive technology replace bias.
+            </p>
+
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 border-l-4 border-l-[#2D5BE3] space-y-2">
+              <blockquote class="text-base font-serif italic text-slate-200 leading-relaxed">
+                "Every individual — no matter who he is or where he belongs — has the potential of a great businessman. Where everyone works, lives another person who once had an idea, tried, failed, and today is called an Owner. We exist to build systems that protect and empower these owners."
+              </blockquote>
+              <cite class="block text-xs font-mono text-slate-400 uppercase tracking-wider not-italic pt-1">
+                — Enlyst Founding Statement · Lahore · 2020
+              </cite>
+            </div>
+          </div>
+
+          <!-- Right: Key Numbers & Proof -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="glass-panel p-8 border-white/10 shadow-2xl">
+              <span class="text-xs font-mono font-bold uppercase text-slate-400 block mb-6 tracking-widest">
+                Our Institutional Track Record
+              </span>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-white/10 text-center">
+                  <div class="text-4xl font-serif text-[#507CF8] mb-1">6</div>
+                  <div class="text-xs font-mono uppercase text-slate-400">Years Operating</div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-white/10 text-center">
+                  <div class="text-4xl font-serif text-emerald-400 mb-1">350+</div>
+                  <div class="text-xs font-mono uppercase text-slate-400">Organisations Served</div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-white/10 text-center">
+                  <div class="text-4xl font-serif text-amber-400 mb-1">4</div>
+                  <div class="text-xs font-mono uppercase text-slate-400">Practice Divisions</div>
+                </div>
+
+                <div class="p-5 rounded-xl bg-slate-900/80 border border-white/10 text-center">
+                  <div class="text-4xl font-serif text-purple-400 mb-1">100%</div>
+                  <div class="text-xs font-mono uppercase text-slate-400">Bias-Free Process</div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-white/10 text-xs text-slate-400 font-sans leading-relaxed">
+                <i class="fa-solid fa-shield-check text-[#507CF8] mr-1.5"></i>
+                Every screening built on pre-defined competency rubrics. Invisible bias has no room to operate.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PHILOSOPHY SECTION ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+            <i class="fa-solid fa-brain"></i> Philosophical Foundations
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            The Bulwark of <span class="italic text-[#507CF8]">Security and Confidence</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            We lucubrate and meditate like monks before conceiving any system. Here are the three principles that anchor our work.
+          </p>
+        </div>
+
+        <!-- 3 Pillars Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          
+          <div class="glass-card-interactive p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-blue-400 block mb-3">01 · THE FOUNDATIONAL TRUTH</span>
+              <h3 class="text-2xl font-serif text-white mb-3">The Owner Inside</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Every individual, no matter who he is or where he belongs, has the potential of a great businessman. Where everyone works, lives another person who once had an idea, tried, failed, and today is called an Owner. We exist to build systems that protect and empower these owners.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 text-xs font-mono text-slate-500">
+              Respect for entrepreneurial capability
+            </div>
+          </div>
+
+          <div class="glass-card-interactive p-8 flex flex-col justify-between border-blue-500/30 bg-[#2D5BE3]/5">
+            <div>
+              <span class="text-xs font-mono font-bold text-emerald-400 block mb-3">02 · THE STRUCTURAL MOTTO</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Systems Protect Processes</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                We seek the absolute elimination of human bias from the system. Technology in the HR space should let a human be a protector of another human — but only if systems protect processes first. We remove subjective guesswork from hiring and performance.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 text-xs font-mono text-slate-500">
+              Total elimination of systemic bias
+            </div>
+          </div>
+
+          <div class="glass-card-interactive p-8 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400 block mb-3">03 · THE OPERATING SPIRIT</span>
+              <h3 class="text-2xl font-serif text-white mb-3">Genuine Friendship</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                A less biased society produces more owners than employees, and ensures that employees take responsibility exactly like owners. We are here to bandage businessmen from the rigors of advancing technology — through genuine friendship and consultancy without commercial exploitation.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 text-xs font-mono text-slate-500">
+              Long-term partnership over transactions
+            </div>
+          </div>
+
+        </div>
+
+        <!-- The Core Question Box -->
+        <div class="glass-panel p-8 sm:p-10 border-white/10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 border-l-2 border-[#2D5BE3] pl-6">
+              <blockquote class="text-2xl font-serif italic text-white leading-snug">
+                "How can a process be automated so that humans can be good to each other?"
+              </blockquote>
+              <span class="block text-xs font-mono text-slate-400 mt-2 uppercase tracking-wider">
+                — The question behind every system Enlyst builds
+              </span>
+            </div>
+
+            <div class="lg:col-span-7 space-y-4 text-sm text-slate-300">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                <div>
+                  <strong class="text-white block font-sans">Behavioural science, not instinct:</strong>
+                  Evaluation criteria are locked before candidates are met. Every screening is built on pre-defined competency rubrics so invisible bias cannot operate.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                <div>
+                  <strong class="text-white block font-sans">Documented decisions:</strong>
+                  Every shortlist, every rejection, and every hire is documented with rigorous justification. The process is always visible, always auditable.
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-blue-400 mt-1"></i>
+                <div>
+                  <strong class="text-white block font-sans">Accountability at 90 days:</strong>
+                  The placement is judged successful only when it is thriving three months later — not merely when the contract is signed or the fee is processed.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== VISION, MISSION & CREED ==================== -->
+    <section class="py-24 relative overflow-hidden border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+            <i class="fa-solid fa-compass"></i> Direction &amp; Purpose
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            Vision. Mission. <span class="italic text-[#507CF8]">In Writing</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            Not marketing language. The exact benchmarks we evaluate every business engagement against.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          
+          <!-- Vision -->
+          <div class="glass-panel p-8 sm:p-10 border-white/10 space-y-4">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-400">Our Vision</span>
+            <h3 class="text-2xl sm:text-3xl font-serif text-white">
+              To become the <em class="italic text-[#507CF8]">shield</em> that protects businesses from financial chaos and regulatory storms.
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              Every SME and growing enterprise in Pakistan deserves access to the institutional infrastructure that large conglomerates build captively. We provide that infrastructure as a shared operating service — integrated, retainer-grade, and uncompromisingly honest.
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div class="glass-panel p-8 sm:p-10 border-white/10 space-y-4">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-emerald-400">Our Mission</span>
+            <h3 class="text-2xl sm:text-3xl font-serif text-white">
+              To arm businesses with the <em class="italic text-emerald-400">expertise, resources</em>, and support they need to grow.
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-sans">
+              Through our four operating divisions — HR, finance, marketing, and cloud tech — combined under one platform, we eliminate the coordination cost that fragments and weakens small institutions operating in thin professional markets.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- The Creed Banner -->
+        <div class="glass-panel p-8 sm:p-10 border-white/10 bg-gradient-to-r from-blue-950/40 to-slate-900/60">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6">
+              <h4 class="text-xs font-mono uppercase text-slate-400 mb-2">The Enlyst Creed</h4>
+              <p class="text-2xl font-serif italic text-white leading-snug">
+                "A less biased society produces more owners than employees — and ensures employees take responsibility exactly like owners."
+              </p>
+            </div>
+            <div class="lg:col-span-6 text-xs text-slate-300 leading-relaxed font-sans border-l border-white/10 pl-6">
+              This is the political economy behind our operating model. It is not aspiration. It is the thesis we test every year against the hiring data we accumulate, the client outcomes we track, and the doctoral research that anchors the <a href="foundation.html" class="text-blue-400 underline font-semibold">Himat-Hikmat Foundation</a>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5 NON-NEGOTIABLE VALUES ==================== -->
+    <section class="py-24 bg-[#07090F] border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
+            <i class="fa-solid fa-gem"></i> Core Standards
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
+            Five Values. <span class="italic text-[#507CF8]">Non-Negotiable</span>.
+          </h2>
+          <p class="text-slate-300 text-base">
+            These are not posted on a wall. They are the criteria against which every Enlyst decision is evaluated by leadership, recruiters, and software systems.
+          </p>
+        </div>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+          
+          <!-- Value 01 -->
+          <div class="glass-panel p-6 sm:p-8 border-white/10 hover:border-blue-500/40 transition">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              <span class="md:col-span-1 text-2xl font-mono font-bold text-blue-400">01</span>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-serif text-white">Belonging</h3>
+                <span class="text-xs font-mono text-slate-400">Dignity in every conversation</span>
+              </div>
+              <div class="md:col-span-7 space-y-2">
+                <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                  Every candidate we meet, every client we serve — they belong in this conversation. We are not gatekeepers. We are bridge-builders between capability and opportunity, regardless of who referred you, who you know, or where you come from.
+                </p>
+                <div class="text-xs font-serif italic text-blue-300 border-l border-blue-500/40 pl-3">
+                  "No business fights alone — and no person should have to navigate the job market alone either."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value 02 -->
+          <div class="glass-panel p-6 sm:p-8 border-white/10 hover:border-blue-500/40 transition">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              <span class="md:col-span-1 text-2xl font-mono font-bold text-blue-400">02</span>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-serif text-white">Clarity</h3>
+                <span class="text-xs font-mono text-slate-400">Honesty over ambiguity</span>
+              </div>
+              <div class="md:col-span-7 space-y-2">
+                <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                  Vague feedback is a form of dishonesty. Every assessment, shortlist, and recommendation we provide is specific, justified, and legible. Candidates know exactly why they were screened; clients know exactly what they are hiring and why.
+                </p>
+                <div class="text-xs font-serif italic text-blue-300 border-l border-blue-500/40 pl-3">
+                  "The most dangerous thing in hiring is the unspoken criterion. We make every criterion explicit before the process begins."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value 03 -->
+          <div class="glass-panel p-6 sm:p-8 border-white/10 hover:border-blue-500/40 transition">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              <span class="md:col-span-1 text-2xl font-mono font-bold text-blue-400">03</span>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-serif text-white">Permanence</h3>
+                <span class="text-xs font-mono text-slate-400">Long-term retention</span>
+              </div>
+              <div class="md:col-span-7 space-y-2">
+                <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                  We build for longevity, not transaction velocity. The firms we place people in should still be benefiting five years later. We measure success at 90 days, not at offer acceptance. Retention is the real metric.
+                </p>
+                <div class="text-xs font-serif italic text-blue-300 border-l border-blue-500/40 pl-3">
+                  "A placement that doesn't last isn't a success. It's a deferred failure with a fee attached."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value 04 -->
+          <div class="glass-panel p-6 sm:p-8 border-white/10 hover:border-blue-500/40 transition">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              <span class="md:col-span-1 text-2xl font-mono font-bold text-blue-400">04</span>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-serif text-white">Honesty First</h3>
+                <span class="text-xs font-mono text-slate-400">Candour over comfort</span>
+              </div>
+              <div class="md:col-span-7 space-y-2">
+                <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                  We tell clients when we cannot fill a role. We tell candidates when they are not the right fit. Commercial pressure does not override candour — ever.
+                </p>
+                <div class="text-xs font-serif italic text-blue-300 border-l border-blue-500/40 pl-3">
+                  "The recruiter who tells you what you want to hear is not your ally. The one who tells you what you need to hear is."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value 05 -->
+          <div class="glass-panel p-6 sm:p-8 border-blue-500/40 bg-blue-950/20 transition">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+              <span class="md:col-span-1 text-2xl font-mono font-bold text-emerald-400">05</span>
+              <div class="md:col-span-4">
+                <h3 class="text-2xl font-serif text-white">Service as Legacy</h3>
+                <span class="text-xs font-mono text-emerald-400">Measuring true institutional impact</span>
+              </div>
+              <div class="md:col-span-7 space-y-2">
+                <p class="text-sm text-slate-300 leading-relaxed font-sans">
+                  We are here to be genuinely useful — not to extract fees. Every engagement should leave the client stronger than before we arrived. The engagement is complete only when the value is demonstrably delivered, not when the invoice is paid.
+                </p>
+                <div class="text-xs font-serif italic text-emerald-300 border-l border-emerald-500/40 pl-3">
+                  "Is this client measurably better equipped than before? If the answer is uncertain, we have more work to do."
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FINALE CTA ==================== -->
+    <section class="py-24 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+          Ready to work with a firm that <br>
+          <span class="italic text-[#507CF8] font-serif">argues for its worldview?</span>
+        </h2>
+        <p class="text-slate-300 text-base max-w-xl mx-auto">
+          Two paths in. One standard of work out.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="contact.html?type=employer" class="btn-primary px-8 py-3.5 text-sm">
+            I'm an Employer →
+          </a>
+          <a href="contact.html?type=candidate" class="btn-secondary px-8 py-3.5 text-sm">
+            I'm a Candidate →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/10 bg-[#07090F] text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 mb-12">
+        
+        <!-- Brand Info (2 cols) -->
+        <div class="md:col-span-2 space-y-4">
+          <img src="assets/images/logo/enlyst-primary-dark.svg" alt="enlyst" class="h-8">
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Smart Recruiting &amp; HR Intelligence · Practice 01 of the Enlyst Framework. Systems protect processes so humans can protect humans.
+          </p>
+          <div class="pt-1 text-xs font-mono text-slate-500 space-y-1">
+            <p>Suite # 202, 2nd Floor, South Tower, Stock Exchange Plaza, Lahore 54000</p>
+            <p>Phone: <a href="tel:03000340036" class="text-slate-300 hover:text-white">03000 340 036</a> · Email: <a href="mailto:recruiter@enlystnow.com" class="text-blue-400">recruiter@enlystnow.com</a></p>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-blue-400 transition">Services</a></li>
+            <li><a href="foundation.html" class="hover:text-blue-400 transition">Foundation</a></li>
+            <li><a href="blog.html" class="hover:text-blue-400 transition">Blog</a></li>
+            <li><a href="brand.html" class="hover:text-blue-400 transition">Brand System</a></li>
+          </ul>
+        </div>
+
+        <!-- Ecosystem -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Ecosystem</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="https://enlystnow.com" target="_blank" rel="noopener" class="hover:text-blue-400 transition">enlyst (HR) ↗</a></li>
+            <li><a href="https://enlysum.com" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">enlysum (Finance) ↗</a></li>
+            <li><a href="https://enlybiz.com" target="_blank" rel="noopener" class="hover:text-amber-400 transition">enlybiz (Growth) ↗</a></li>
+            <li><a href="https://enlysoft.net" target="_blank" rel="noopener" class="hover:text-purple-400 transition">enlysoft (Cloud) ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Contact -->
+        <div>
+          <h4 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200 mb-4">Direct Contact</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="contact.html" class="text-blue-400 font-semibold hover:underline">Get in Touch →</a></li>
+            <li><a href="https://wa.me/923000340036" target="_blank" rel="noopener" class="text-emerald-400 hover:underline">WhatsApp: 03000 340 036</a></li>
+            <li><a href="mailto:recruiter@enlystnow.com" class="hover:text-white">recruiter@enlystnow.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div>
+          &copy; 2026 Enlyst Smart Recruiting Pvt Ltd · Lahore Stock Exchange Plaza.
+        </div>
+        <div class="flex items-center gap-6 text-slate-500">
+          <span>Non-Disclosure Protected</span>
+          <span>Equal Opportunity Employer</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
