@@ -684,3 +684,78 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-color: #2D5BE3 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
+
+/* 11. GRAPHIC FRAMES & SVG ILLUSTRATION ADAPTATION */
+.graphic-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  box-shadow: var(--glass-shadow);
+}
+
+.graphic-frame img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.graphic-frame:hover img {
+  transform: scale(1.03);
+}
+
+.svg-graphic-box {
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.45);
+  padding: 14px;
+  overflow: hidden;
+}
+
+[data-theme="light"] .svg-graphic-box {
+  background: #F8FAFC !important;
+  border-color: #E2E0DB !important;
+}
+
+[data-theme="light"] .svg-adaptive-stroke {
+  stroke: #334155 !important;
+}
+
+[data-theme="light"] .svg-adaptive-muted {
+  stroke: #94A3B8 !important;
+}
+
+[data-theme="light"] .svg-adaptive-text {
+  fill: #1E293B !important;
+}
+
+[data-theme="light"] .svg-adaptive-subtext {
+  fill: #64748B !important;
+}
+
+[data-theme="light"] .svg-adaptive-bg {
+  fill: #FFFFFF !important;
+}
+
+/* Ensure dark photo caption overlays remain readable in light mode */
+[data-theme="light"] .photo-overlay-card,
+[data-theme="light"] .photo-overlay-card * {
+  color: #F8FAFC !important;
+}
+
+[data-theme="light"] .photo-overlay-card .text-amber-300,
+[data-theme="light"] .photo-overlay-card .text-amber-400 {
+  color: #FCD34D !important;
+}
+
+[data-theme="light"] .photo-overlay-card .text-blue-300,
+[data-theme="light"] .photo-overlay-card .text-blue-400 {
+  color: #93C5FD !important;
+}
+
+[data-theme="light"] .photo-overlay-card .text-emerald-300,
+[data-theme="light"] .photo-overlay-card .text-emerald-400 {
+  color: #6EE7B7 !important;
+}

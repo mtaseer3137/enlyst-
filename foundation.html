@@ -157,42 +157,43 @@
             </div>
           </div>
 
-          <!-- Right: Field Data Cards Stack -->
+          <!-- Right: Editorial Field Photo & Data Cards Stack -->
           <div class="lg:col-span-5 space-y-4">
             
-            <div class="glass-panel p-6 border-l-4 border-l-amber-400 space-y-2">
+            <!-- Documentary Field Photo -->
+            <div class="graphic-frame border-amber-500/30 shadow-2xl">
+              <img src="assets/images/foundation-classroom.jpg" alt="Punjab primary school students and teacher during Himat-Hikmat field study" class="h-56 sm:h-64 w-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D14] via-[#0A0D14]/35 to-transparent"></div>
+              <div class="photo-overlay-card absolute bottom-0 inset-x-0 p-4 flex items-end justify-between gap-3">
+                <div>
+                  <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-300 block">Primary Field Observation · Punjab</span>
+                  <p class="text-xs text-slate-100 font-sans mt-0.5">37,214 children assessed across Lahore, Sheikhupura &amp; Gujranwala</p>
+                </div>
+                <span class="px-2 py-1 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] font-mono text-amber-300 whitespace-nowrap">N = 37,214</span>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 border-l-4 border-l-amber-400 space-y-1.5">
               <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-amber-400">
                 Finding · Punjab School Survey
               </span>
               <p class="text-xs text-slate-200 leading-relaxed font-sans">
-                Structural inequality — not teacher effort — is the primary driver of learning deficiency. Resource allocation at district level explains <strong>68% of the variance</strong> in primary school outcomes.
+                Structural inequality — not teacher effort — drives learning deficiency. District resource allocation explains <strong>68% of the variance</strong> in primary outcomes.
               </p>
-              <div class="text-[10px] font-mono text-slate-400 pt-1">
+              <div class="text-[10px] font-mono text-slate-400 pt-0.5">
                 Doctoral Research · University of Punjab · Dr. Imran Sabir
               </div>
             </div>
 
-            <div class="glass-panel p-6 border-l-4 border-l-blue-400 space-y-2">
+            <div class="glass-panel p-5 border-l-4 border-l-blue-400 space-y-1.5">
               <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-blue-400">
                 Finding · GITTC Lahore Teacher Cohort
               </span>
               <p class="text-xs text-slate-200 leading-relaxed font-sans">
-                <strong>55% of surveyed government teachers</strong> report zero exposure to AI-assisted lesson planning tools. Of the 45% with exposure, fewer than 12% use them consistently in classroom delivery.
+                <strong>55% of government teachers</strong> report zero exposure to AI lesson tools; fewer than 12% use them consistently in classrooms.
               </p>
-              <div class="text-[10px] font-mono text-slate-400 pt-1">
+              <div class="text-[10px] font-mono text-slate-400 pt-0.5">
                 GITTC Lahore · Government AI Training Centre · 2024–2025
-              </div>
-            </div>
-
-            <div class="glass-panel p-6 border-l-4 border-l-emerald-400 space-y-2">
-              <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-400">
-                Policy Implication · Legislative Roadmap
-              </span>
-              <p class="text-xs text-slate-200 leading-relaxed font-sans">
-                The research proposes mandatory AI literacy standards for all new government school teacher appointments from 2027 — embedded into PPSC testing criteria and BISE curriculum review cycles.
-              </p>
-              <div class="text-[10px] font-mono text-slate-400 pt-1">
-                Proposed: Punjab Education Commission · 2026 Submission
               </div>
             </div>
 
@@ -223,6 +224,19 @@
           
           <div class="glass-card-interactive p-6 flex flex-col justify-between">
             <div>
+              <!-- Lens 01 Graphic: Structural Inequality Variance Bars -->
+              <div class="svg-graphic-box mb-5">
+                <svg viewBox="0 0 220 90" class="w-full h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="18" width="28" height="58" rx="4" fill="#C4A24A" fill-opacity="0.9"/>
+                  <rect x="52" y="34" width="28" height="42" rx="4" fill="#C4A24A" fill-opacity="0.55"/>
+                  <rect x="92" y="52" width="28" height="24" rx="4" fill="#C4A24A" fill-opacity="0.3"/>
+                  <rect x="132" y="62" width="28" height="14" rx="4" fill="#C4A24A" fill-opacity="0.2"/>
+                  <path d="M16 14 L156 56" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="4 3"/>
+                  <circle cx="186" cy="40" r="20" stroke="#C4A24A" stroke-width="1.5" stroke-opacity="0.35"/>
+                  <text x="186" y="44" text-anchor="middle" fill="#F59E0B" font-family="DM Mono, monospace" font-size="11" font-weight="700">68%</text>
+                  <line x1="8" y1="78" x2="212" y2="78" class="svg-adaptive-muted" stroke="#475569" stroke-width="1"/>
+                </svg>
+              </div>
               <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 01</span>
               <h3 class="text-2xl font-serif text-white mb-3">Structural <em class="italic text-amber-400">Inequality</em></h3>
               <p class="text-xs text-slate-300 leading-relaxed font-sans">
@@ -236,6 +250,19 @@
 
           <div class="glass-card-interactive p-6 flex flex-col justify-between">
             <div>
+              <!-- Lens 02 Graphic: Tech Readiness Gap Gauge -->
+              <div class="svg-graphic-box mb-5">
+                <svg viewBox="0 0 220 90" class="w-full h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="14" y="20" width="192" height="14" rx="7" fill="#334155" fill-opacity="0.35"/>
+                  <rect x="14" y="20" width="106" height="14" rx="7" fill="#EF4444" fill-opacity="0.75"/>
+                  <text x="14" y="13" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">ZERO AI EXPOSURE: 55%</text>
+                  <rect x="14" y="54" width="192" height="14" rx="7" fill="#334155" fill-opacity="0.35"/>
+                  <rect x="14" y="54" width="26" height="14" rx="7" fill="#2D5BE3"/>
+                  <text x="14" y="47" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">CONSISTENT DELIVERY: &lt;12%</text>
+                  <path d="M126 27 L166 27 L166 61 L46 61" stroke="#C4A24A" stroke-width="1.2" stroke-dasharray="3 3"/>
+                  <circle cx="166" cy="44" r="5" fill="#C4A24A"/>
+                </svg>
+              </div>
               <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 02</span>
               <h3 class="text-2xl font-serif text-white mb-3">Technology <em class="italic text-amber-400">Readiness Gap</em></h3>
               <p class="text-xs text-slate-300 leading-relaxed font-sans">
@@ -249,6 +276,19 @@
 
           <div class="glass-card-interactive p-6 flex flex-col justify-between">
             <div>
+              <!-- Lens 03 Graphic: Metric Divergence Dual Trend -->
+              <div class="svg-graphic-box mb-5">
+                <svg viewBox="0 0 220 90" class="w-full h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 58 Q70 40 120 26 T206 16" stroke="#10B981" stroke-width="2.2" fill="none"/>
+                  <path d="M14 58 Q70 62 120 68 T206 72" stroke="#F59E0B" stroke-width="2.2" stroke-dasharray="4 3" fill="none"/>
+                  <line x1="168" y1="22" x2="168" y2="70" stroke="#EF4444" stroke-width="1.2" stroke-dasharray="2 2"/>
+                  <circle cx="14" cy="58" r="3.5" fill="#C4A24A"/>
+                  <circle cx="206" cy="16" r="3.5" fill="#10B981"/>
+                  <circle cx="206" cy="72" r="3.5" fill="#F59E0B"/>
+                  <text x="115" y="13" fill="#10B981" font-family="DM Mono, monospace" font-size="8">REPORTED</text>
+                  <text x="122" y="83" fill="#F59E0B" font-family="DM Mono, monospace" font-size="8">ACTUAL CLASSROOM</text>
+                </svg>
+              </div>
               <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 03</span>
               <h3 class="text-2xl font-serif text-white mb-3">Governance <em class="italic text-amber-400">Accountability</em></h3>
               <p class="text-xs text-slate-300 leading-relaxed font-sans">
@@ -262,6 +302,19 @@
 
           <div class="glass-card-interactive p-6 flex flex-col justify-between">
             <div>
+              <!-- Lens 04 Graphic: Evidence to Legislation Funnel -->
+              <div class="svg-graphic-box mb-5">
+                <svg viewBox="0 0 220 90" class="w-full h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="24" width="46" height="42" rx="6" stroke="#C4A24A" stroke-width="1.5" fill="#C4A24A" fill-opacity="0.12"/>
+                  <text x="35" y="48" text-anchor="middle" class="svg-adaptive-text" fill="#F8FAFC" font-family="DM Mono, monospace" font-size="8">DATA</text>
+                  <path d="M62 45 L82 45" stroke="#C4A24A" stroke-width="1.8" marker-end="url(#arrow-gold)"/>
+                  <rect x="86" y="24" width="48" height="42" rx="6" stroke="#2D5BE3" stroke-width="1.5" fill="#2D5BE3" fill-opacity="0.15"/>
+                  <text x="110" y="48" text-anchor="middle" class="svg-adaptive-text" fill="#F8FAFC" font-family="DM Mono, monospace" font-size="8">BRIEF</text>
+                  <path d="M138 45 L158 45" stroke="#1A7A4A" stroke-width="1.8"/>
+                  <rect x="162" y="24" width="46" height="42" rx="6" stroke="#10B981" stroke-width="1.5" fill="#10B981" fill-opacity="0.18"/>
+                  <text x="185" y="48" text-anchor="middle" fill="#10B981" font-family="DM Mono, monospace" font-size="8" font-weight="700">LAW</text>
+                </svg>
+              </div>
               <span class="text-xs font-mono font-bold text-amber-400 mb-2 block">LENS 04</span>
               <h3 class="text-2xl font-serif text-white mb-3">Policy <em class="italic text-amber-400">Translation</em></h3>
               <p class="text-xs text-slate-300 leading-relaxed font-sans">
@@ -285,7 +338,19 @@
               <p class="text-sm text-slate-300 leading-relaxed font-sans">
                 Every statistic in this research was gathered through primary field visits, structured teacher interviews, and student assessment sampling across Lahore, Sheikhupura, and Gujranwala divisions — not government-reported aggregate data.
               </p>
-              <div class="text-xs font-mono text-slate-400 pt-2">
+              <!-- Visual Regression Breakdown Bar Chart -->
+              <div class="svg-graphic-box mt-3">
+                <svg viewBox="0 0 460 88" class="w-full h-22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <text x="8" y="16" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="9">DISTRICT VARIANCE EXPLAINED BY RESOURCE ALLOCATION (68%)</text>
+                  <rect x="8" y="22" width="444" height="10" rx="5" fill="#334155" fill-opacity="0.35"/>
+                  <rect x="8" y="22" width="302" height="10" rx="5" fill="#10B981"/>
+                  <text x="8" y="52" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="9">TEACHERS LACKING AI READINESS (55%) VS MEASURABLE LEARNING DEFICIENCY (24.3%)</text>
+                  <rect x="8" y="58" width="444" height="10" rx="5" fill="#334155" fill-opacity="0.35"/>
+                  <rect x="8" y="58" width="244" height="10" rx="5" fill="#C4A24A"/>
+                  <rect x="258" y="58" width="108" height="10" rx="5" fill="#2D5BE3"/>
+                </svg>
+              </div>
+              <div class="text-xs font-mono text-slate-400 pt-1">
                 Controlled regression model · Sample N=37,214 · p &lt; 0.001 · Doctoral Research supervised by Dr. Imran Sabir
               </div>
             </div>
@@ -335,56 +400,113 @@
           </p>
         </div>
 
-        <div class="space-y-6 max-w-4xl mx-auto relative pl-6 border-l-2 border-amber-500/30">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          <!-- 2024-2025 -->
-          <div class="relative pl-6">
-            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 border-4 border-[#0A0D14]"></div>
-            <span class="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">2024–2025 · Complete</span>
-            <h4 class="text-xl font-serif text-white mt-1">Primary Field Research</h4>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
-              37,000+ children sampled. 200+ teacher interviews. GITTC Lahore cohort data collected. Regression models finalised. Doctoral thesis drafted and submitted for supervisor review.
-            </p>
+          <!-- Left Sticky Visual: 5-Year Legislative Arc Graphic -->
+          <div class="lg:col-span-5 lg:sticky lg:top-28">
+            <div class="glass-panel p-6 sm:p-8 border-amber-500/25 space-y-4">
+              <span class="text-xs font-mono font-bold uppercase tracking-widest text-amber-400 block">Legislative Trajectory · 2024–2030</span>
+              <div class="svg-graphic-box">
+                <svg viewBox="0 0 340 240" class="w-full h-56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Arc track -->
+                  <path d="M40 205 C40 120, 140 100, 300 35" class="svg-adaptive-muted" stroke="#475569" stroke-width="2" stroke-dasharray="5 4"/>
+                  <!-- Completed & Active progress -->
+                  <path d="M40 205 C40 158, 76 135, 112 118" stroke="#C4A24A" stroke-width="3"/>
+                  <!-- Milestone 1: 2024-25 -->
+                  <circle cx="40" cy="205" r="10" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="2"/>
+                  <circle cx="40" cy="205" r="4" fill="#10B981"/>
+                  <text x="58" y="203" class="svg-adaptive-text" fill="#F8FAFC" font-family="DM Mono, monospace" font-size="10" font-weight="700">2024–25 Field Survey</text>
+                  <text x="58" y="216" class="svg-adaptive-subtext" fill="#94A3B8" font-family="Inter, sans-serif" font-size="9">37k+ Students · Complete</text>
+                  <!-- Milestone 2: 2026 -->
+                  <circle cx="108" cy="120" r="11" fill="#F59E0B" fill-opacity="0.25" stroke="#F59E0B" stroke-width="2"/>
+                  <circle cx="108" cy="120" r="4.5" fill="#F59E0B"/>
+                  <text x="126" y="118" fill="#F59E0B" font-family="DM Mono, monospace" font-size="10" font-weight="700">2026 PhD Defence</text>
+                  <text x="126" y="131" class="svg-adaptive-subtext" fill="#94A3B8" font-family="Inter, sans-serif" font-size="9">Punjab Univ · In Progress</text>
+                  <!-- Milestone 3: 2027 -->
+                  <circle cx="176" cy="86" r="8" fill="#2D5BE3" fill-opacity="0.2" stroke="#2D5BE3" stroke-width="1.8"/>
+                  <text x="192" y="85" class="svg-adaptive-text" fill="#E2E8F0" font-family="DM Mono, monospace" font-size="10">2027 PPSC Policy</text>
+                  <!-- Milestone 4: 2028 -->
+                  <circle cx="242" cy="59" r="8" fill="#64748B" fill-opacity="0.2" stroke="#64748B" stroke-width="1.8"/>
+                  <text x="148" y="55" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="9.5">2028 GITTC Pilot</text>
+                  <!-- Milestone 5: 2030 -->
+                  <circle cx="300" cy="35" r="11" fill="#C4A24A" fill-opacity="0.2" stroke="#C4A24A" stroke-width="2"/>
+                  <text x="180" y="27" fill="#C4A24A" font-family="DM Mono, monospace" font-size="10" font-weight="700">2030 National HEC</text>
+                </svg>
+              </div>
+              <p class="text-xs text-slate-400 font-sans leading-relaxed">
+                Designed as an actionable five-stage institutional cascade — translating primary doctoral classrooms metrics directly into provincial PPSC &amp; BISE standards.
+              </p>
+            </div>
           </div>
 
-          <!-- 2026 -->
-          <div class="relative pl-6">
-            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-400 border-4 border-[#0A0D14] animate-ping"></div>
-            <span class="text-xs font-mono font-bold uppercase text-amber-400 tracking-wider">2026 · In Progress</span>
-            <h4 class="text-xl font-serif text-white mt-1">Doctoral Defence &amp; Publication</h4>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
-              Thesis defence at University of Punjab under Dr. Imran Sabir. Peer-reviewed publication of primary findings. Policy brief prepared for Punjab Education Commission submission window.
-            </p>
-          </div>
+          <!-- Right: 5 Milestones Stack -->
+          <div class="lg:col-span-7 space-y-6 relative pl-6 border-l-2 border-amber-500/30">
+            
+            <!-- 2024-2025 -->
+            <div class="relative pl-6 glass-panel p-5 border-white/10">
+              <div class="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-emerald-400 border-4 border-[#0A0D14]"></div>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">2024–2025 · Complete</span>
+                <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              </div>
+              <h4 class="text-xl font-serif text-white mt-1">Primary Field Research</h4>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+                37,000+ children sampled. 200+ teacher interviews. GITTC Lahore cohort data collected. Regression models finalised. Doctoral thesis drafted and submitted for supervisor review.
+              </p>
+            </div>
 
-          <!-- 2027 -->
-          <div class="relative pl-6">
-            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
-            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2027 · Planned</span>
-            <h4 class="text-xl font-serif text-white mt-1">Provincial Policy Submission</h4>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
-              Formal submission to Punjab Education Department: AI literacy standards for new government school teacher appointments. Proposed integration into PPSC testing criteria and BISE curriculum review cycles.
-            </p>
-          </div>
+            <!-- 2026 -->
+            <div class="relative pl-6 glass-panel p-5 border-amber-500/30">
+              <div class="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-amber-400 border-4 border-[#0A0D14]"></div>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-mono font-bold uppercase text-amber-400 tracking-wider">2026 · In Progress</span>
+                <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+              </div>
+              <h4 class="text-xl font-serif text-white mt-1">Doctoral Defence &amp; Publication</h4>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+                Thesis defence at University of Punjab under Dr. Imran Sabir. Peer-reviewed publication of primary findings. Policy brief prepared for Punjab Education Commission submission window.
+              </p>
+            </div>
 
-          <!-- 2028 -->
-          <div class="relative pl-6">
-            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
-            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2028 · Planned</span>
-            <h4 class="text-xl font-serif text-white mt-1">Pilot Implementation</h4>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
-              GITTC Lahore delivers first cohort under the new standard. Enlyst Education arm provides curriculum support. Outcome data collected for legislative case.
-            </p>
-          </div>
+            <!-- 2027 -->
+            <div class="relative pl-6 glass-panel p-5 border-white/10">
+              <div class="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-blue-400 border-4 border-[#0A0D14]"></div>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2027 · Planned</span>
+                <i class="fa-solid fa-landmark text-blue-400"></i>
+              </div>
+              <h4 class="text-xl font-serif text-white mt-1">Provincial Policy Submission</h4>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+                Formal submission to Punjab Education Department: AI literacy standards for new government school teacher appointments. Proposed integration into PPSC testing criteria and BISE curriculum review cycles.
+              </p>
+            </div>
 
-          <!-- 2029-2030 -->
-          <div class="relative pl-6">
-            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-[#0A0D14]"></div>
-            <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2029–2030 · Vision</span>
-            <h4 class="text-xl font-serif text-white mt-1">National Replication</h4>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
-              Punjab model presented to Federal Education Ministry as replication template. HEC engagement for integration into pre-service teacher training nationwide.
-            </p>
+            <!-- 2028 -->
+            <div class="relative pl-6 glass-panel p-5 border-white/10">
+              <div class="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-slate-500 border-4 border-[#0A0D14]"></div>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2028 · Planned</span>
+                <i class="fa-solid fa-chalkboard-user text-slate-400"></i>
+              </div>
+              <h4 class="text-xl font-serif text-white mt-1">Pilot Implementation</h4>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+                GITTC Lahore delivers first cohort under the new standard. Enlyst Education arm provides curriculum support. Outcome data collected for legislative case.
+              </p>
+            </div>
+
+            <!-- 2029-2030 -->
+            <div class="relative pl-6 glass-panel p-5 border-white/10">
+              <div class="absolute -left-[35px] top-6 w-4 h-4 rounded-full bg-slate-500 border-4 border-[#0A0D14]"></div>
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-xs font-mono font-bold uppercase text-slate-400 tracking-wider">2029–2030 · Vision</span>
+                <i class="fa-solid fa-flag text-amber-400"></i>
+              </div>
+              <h4 class="text-xl font-serif text-white mt-1">National Replication</h4>
+              <p class="text-xs text-slate-300 leading-relaxed font-sans mt-1">
+                Punjab model presented to Federal Education Ministry as replication template. HEC engagement for integration into pre-service teacher training nationwide.
+              </p>
+            </div>
+
           </div>
 
         </div>
@@ -397,9 +519,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="glass-panel p-8 sm:p-12 border-amber-500/20">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             
-            <div class="lg:col-span-5 space-y-4">
+            <div class="lg:col-span-5 space-y-5">
               <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">Foundation Governance</span>
               <h3 class="text-3xl font-serif text-white leading-snug">
                 Ring-fenced. <br/><em class="italic text-amber-400 font-serif">By design.</em>
@@ -410,7 +532,30 @@
               <cite class="block text-xs font-mono text-slate-400 not-italic">
                 — Wasim Hassan, Founder · Enlyst Foundation
               </cite>
-              <div class="pt-2">
+
+              <!-- Ring-Fenced Architecture SVG Graphic -->
+              <div class="svg-graphic-box">
+                <svg viewBox="0 0 320 130" class="w-full h-32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Left: Commercial -->
+                  <rect x="10" y="18" width="110" height="94" rx="10" stroke="#2D5BE3" stroke-width="1.5" fill="#2D5BE3" fill-opacity="0.1"/>
+                  <text x="65" y="40" text-anchor="middle" fill="#507CF8" font-family="DM Mono, monospace" font-size="9" font-weight="700">COMMERCIAL</text>
+                  <text x="65" y="58" text-anchor="middle" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">enlyst · enlysum</text>
+                  <text x="65" y="72" text-anchor="middle" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">enlybiz · enlysoft</text>
+                  <text x="65" y="96" text-anchor="middle" class="svg-adaptive-subtext" fill="#64748B" font-family="Inter, sans-serif" font-size="8">Zero Editorial Influence</text>
+                  <!-- Center Firewall -->
+                  <line x1="160" y1="10" x2="160" y2="120" stroke="#C4A24A" stroke-width="3" stroke-dasharray="6 4"/>
+                  <circle cx="160" cy="65" r="15" fill="#C4A24A"/>
+                  <path d="M154 65 L158 69 L167 60" stroke="#0A0D15" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Right: Altruistic -->
+                  <rect x="200" y="18" width="110" height="94" rx="10" stroke="#C4A24A" stroke-width="1.5" fill="#C4A24A" fill-opacity="0.12"/>
+                  <text x="255" y="40" text-anchor="middle" fill="#C4A24A" font-family="DM Mono, monospace" font-size="9" font-weight="700">FOUNDATION</text>
+                  <text x="255" y="58" text-anchor="middle" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">Independent Grants</text>
+                  <text x="255" y="72" text-anchor="middle" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">Researcher Primacy</text>
+                  <text x="255" y="96" text-anchor="middle" fill="#10B981" font-family="Inter, sans-serif" font-size="8">Anonymised Open Data</text>
+                </svg>
+              </div>
+
+              <div class="pt-1">
                 <a href="contact.html?type=foundation" class="btn-primary py-2.5 px-6 text-xs" style="background:#C4A24A;color:#0A0D15;">
                   Partner With The Foundation
                 </a>
@@ -418,24 +563,36 @@
             </div>
 
             <div class="lg:col-span-7 space-y-4 text-xs font-sans text-slate-300 leading-relaxed">
-              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
-                <strong class="text-amber-400 block font-mono text-xs mb-1">01 · REVENUE RING-FENCE</strong>
-                No commercial revenue from enlyst, enlysum, enlybiz, or enlysoft is used to fund Foundation research. The Foundation is funded independently through grants, partnerships, and direct contributions.
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10 flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <strong class="text-amber-400 block font-mono text-xs mb-1">01 · REVENUE RING-FENCE</strong>
+                  No commercial revenue from enlyst, enlysum, enlybiz, or enlysoft is used to fund Foundation research. The Foundation is funded independently through grants, partnerships, and direct contributions.
+                </div>
               </div>
 
-              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
-                <strong class="text-amber-400 block font-mono text-xs mb-1">02 · RESEARCH INDEPENDENCE</strong>
-                No commercial client has editorial influence over research conclusions, publication timing, or policy positions. Findings are published as documented — never sanitised for business comfort.
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10 flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div>
+                  <strong class="text-amber-400 block font-mono text-xs mb-1">02 · RESEARCH INDEPENDENCE</strong>
+                  No commercial client has editorial influence over research conclusions, publication timing, or policy positions. Findings are published as documented — never sanitised for business comfort.
+                </div>
               </div>
 
-              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
-                <strong class="text-amber-400 block font-mono text-xs mb-1">03 · DATA STEWARDSHIP</strong>
-                All school visit data, student outcome data, and teacher interview data is anonymised, stored securely, and never used as marketing collateral without researcher consent.
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10 flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-database"></i></div>
+                <div>
+                  <strong class="text-amber-400 block font-mono text-xs mb-1">03 · DATA STEWARDSHIP</strong>
+                  All school visit data, student outcome data, and teacher interview data is anonymised, stored securely, and never used as marketing collateral without researcher consent.
+                </div>
               </div>
 
-              <div class="p-4 rounded-xl bg-slate-900 border border-white/10">
-                <strong class="text-amber-400 block font-mono text-xs mb-1">04 · RESEARCHER PRIMACY</strong>
-                Dr. Imran Sabir and the doctoral research team hold final authority over all published findings. The Foundation is the enabler, not the author.
+              <div class="p-4 rounded-xl bg-slate-900 border border-white/10 flex items-start gap-4">
+                <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-award"></i></div>
+                <div>
+                  <strong class="text-amber-400 block font-mono text-xs mb-1">04 · RESEARCHER PRIMACY</strong>
+                  Dr. Imran Sabir and the doctoral research team hold final authority over all published findings. The Foundation is the enabler, not the author.
+                </div>
               </div>
             </div>
 
@@ -448,6 +605,15 @@
     <!-- ==================== FINALE CTA ==================== -->
     <section class="py-24 text-center relative overflow-hidden">
       <div class="max-w-4xl mx-auto px-6 space-y-6">
+        <!-- Concentric Reach Graphic -->
+        <div class="mx-auto w-28 h-20 flex items-center justify-center">
+          <svg viewBox="0 0 120 80" class="w-28 h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="40" r="34" stroke="#C4A24A" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <circle cx="60" cy="40" r="23" stroke="#C4A24A" stroke-opacity="0.45" stroke-width="1.5"/>
+            <circle cx="60" cy="40" r="12" fill="#C4A24A" fill-opacity="0.2" stroke="#C4A24A" stroke-width="2"/>
+            <circle cx="60" cy="40" r="4" fill="#C4A24A"/>
+          </svg>
+        </div>
         <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
           Every partnership <br>
           <span class="italic text-amber-400 font-serif">extends the reach.</span>

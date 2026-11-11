@@ -298,42 +298,63 @@
 
   <!-- ==================== THE VISION MANIFESTO ==================== -->
   <section id="vision" class="py-24 bg-[#07090F] border-y border-white/10 relative">
-    <div class="max-w-4xl mx-auto px-6 text-center space-y-8">
-      
-      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
-        <i class="fa-solid fa-flag"></i> The Enlyst Manifesto
-      </span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Manifesto Copy -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+            <i class="fa-solid fa-flag"></i> The Enlyst Manifesto
+          </span>
 
-      <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
-        "Enlyst isn't just a vision; <br>
-        <span class="text-[#507CF8] italic font-serif">it's a fighting spirit.</span>"
-      </h2>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white leading-tight">
+            "Enlyst isn't just a vision; <br>
+            <span class="text-[#507CF8] italic font-serif">it's a fighting spirit.</span>"
+          </h2>
 
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
-        We stand shoulder-to-shoulder with entrepreneurs and business leaders, offering integrated solutions and unwavering support so you can weather any storm and emerge victorious.
-      </p>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
+            We stand shoulder-to-shoulder with entrepreneurs and business leaders, offering integrated solutions and unwavering support so you can weather any storm and emerge victorious.
+          </p>
 
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-left space-y-3 font-sans text-sm text-slate-300">
-        <p class="flex items-start gap-3">
-          <i class="fa-solid fa-shield text-[#507CF8] mt-1"></i>
-          <span><strong>Your shield against financial chaos:</strong> Punch inflation in the face with Enlyst's data-driven strategies.</span>
-        </p>
-        <p class="flex items-start gap-3">
-          <i class="fa-solid fa-scale-balanced text-emerald-400 mt-1"></i>
-          <span><strong>Don't let regulations knock you out:</strong> Enlyst has your back with seamless compliance, payroll, and HR governance.</span>
-        </p>
-        <p class="flex items-start gap-3">
-          <i class="fa-solid fa-bolt text-amber-400 mt-1"></i>
-          <span><strong>Cut through the competition:</strong> Land powerful blows with Sniper AI™, elite recruitment, and growth architecture.</span>
-        </p>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-left space-y-3 font-sans text-sm text-slate-300">
+            <p class="flex items-start gap-3">
+              <i class="fa-solid fa-shield text-[#507CF8] mt-1"></i>
+              <span><strong>Your shield against financial chaos:</strong> Punch inflation in the face with Enlyst's data-driven strategies.</span>
+            </p>
+            <p class="flex items-start gap-3">
+              <i class="fa-solid fa-scale-balanced text-emerald-400 mt-1"></i>
+              <span><strong>Don't let regulations knock you out:</strong> Enlyst has your back with seamless compliance, payroll, and HR governance.</span>
+            </p>
+            <p class="flex items-start gap-3">
+              <i class="fa-solid fa-bolt text-amber-400 mt-1"></i>
+              <span><strong>Cut through the competition:</strong> Land powerful blows with Sniper AI™, elite recruitment, and growth architecture.</span>
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="openModal('consultation-modal')" class="btn-primary px-8 py-3.5 text-sm">
+              Stop Fighting Alone · Enlist Today
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Leadership Ally Visual -->
+        <div class="lg:col-span-5">
+          <div class="graphic-frame border-blue-500/30 shadow-2xl">
+            <img src="assets/images/leader.jpg" alt="Enlyst Operating Partner standing beside founders" class="h-[440px] w-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D14] via-[#0A0D14]/30 to-transparent"></div>
+            <div class="photo-overlay-card absolute bottom-0 inset-x-0 p-6 space-y-2">
+              <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-blue-500/20 border border-blue-400/40 text-[10px] font-mono font-bold text-blue-300 uppercase">
+                <i class="fa-solid fa-shield-halved"></i> Battle-Tested Operating Ally
+              </div>
+              <p class="text-sm font-serif italic text-slate-100 leading-snug">
+                "Systems protect processes so humans can protect humans — shoulder to shoulder."
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div class="pt-2">
-        <button onclick="openModal('consultation-modal')" class="btn-primary px-8 py-3.5 text-sm">
-          Stop Fighting Alone · Enlist Today
-        </button>
-      </div>
-
     </div>
   </section>
 
@@ -359,12 +380,26 @@
         <!-- Pillar 1: enlyst (People Powered) -->
         <div id="div-talent" class="division-card border-[#2D5BE3]/40 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-3">
               <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#507CF8]">
                 <span class="div-dot bg-[#2D5BE3]"></span>
-                01 · HR & TALENT
+                01 · HR &amp; TALENT
               </span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20">enlystnow.com</span>
+            </div>
+
+            <!-- Matching HR Network Graphic -->
+            <div class="svg-graphic-box mb-4">
+              <svg viewBox="0 0 220 74" class="w-full h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="42" cy="37" r="14" fill="#2D5BE3" fill-opacity="0.18" stroke="#2D5BE3" stroke-width="1.6"/>
+                <circle cx="110" cy="24" r="16" fill="#2D5BE3" fill-opacity="0.28" stroke="#507CF8" stroke-width="1.8"/>
+                <circle cx="178" cy="40" r="14" fill="#2D5BE3" fill-opacity="0.18" stroke="#2D5BE3" stroke-width="1.6"/>
+                <line x1="56" y1="34" x2="94" y2="27" stroke="#507CF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <line x1="126" y1="28" x2="164" y2="37" stroke="#507CF8" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <circle cx="42" cy="37" r="4" fill="#507CF8"/>
+                <circle cx="110" cy="24" r="5" fill="#2D5BE3"/>
+                <circle cx="178" cy="40" r="4" fill="#507CF8"/>
+              </svg>
             </div>
             
             <h3 class="text-2xl font-serif text-white mb-2">People Powered</h3>
@@ -374,8 +409,8 @@
 
             <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
               <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Recruitment Process Outsourcing (RPO)</li>
-              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Sniper AI™ Sourcing & Matching</li>
-              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Burnout Prevention & Culture</li>
+              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Sniper AI™ Sourcing &amp; Matching</li>
+              <li><i class="fa-solid fa-check text-blue-400 mr-1.5"></i>Burnout Prevention &amp; Culture</li>
             </ul>
           </div>
 
@@ -390,12 +425,23 @@
         <!-- Pillar 2: enlysum (Finance Simplified) -->
         <div id="div-finance" class="division-card border-[#1A7A4A]/40 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-3">
               <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-emerald-400">
                 <span class="div-dot bg-[#1A7A4A]"></span>
-                02 · FINANCE & ACCOUNTING
+                02 · FINANCE &amp; ACCOUNTING
               </span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">enlysum.com</span>
+            </div>
+
+            <!-- Matching Finance Shield & Ledger Graphic -->
+            <div class="svg-graphic-box mb-4">
+              <svg viewBox="0 0 220 74" class="w-full h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="42" width="22" height="22" rx="3" fill="#1A7A4A" fill-opacity="0.35"/>
+                <rect x="50" y="30" width="22" height="34" rx="3" fill="#1A7A4A" fill-opacity="0.6"/>
+                <rect x="80" y="18" width="22" height="46" rx="3" fill="#1A7A4A" fill-opacity="0.9"/>
+                <path d="M158 14 L188 24 V42 C188 54 174 62 158 66 C142 62 128 54 128 42 V24 L158 14 Z" fill="#1A7A4A" fill-opacity="0.2" stroke="#10B981" stroke-width="1.6"/>
+                <path d="M150 40 L156 46 L167 33" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
             
             <h3 class="text-2xl font-serif text-white mb-2">Finance Simplified</h3>
@@ -404,8 +450,8 @@
             </p>
 
             <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
-              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Full-Cycle Accounting & Bookkeeping</li>
-              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Automated Payroll & Tax Filing</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Full-Cycle Accounting &amp; Bookkeeping</li>
+              <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Automated Payroll &amp; Tax Filing</li>
               <li><i class="fa-solid fa-check text-emerald-400 mr-1.5"></i>Financial Chaos Shield</li>
             </ul>
           </div>
@@ -421,12 +467,23 @@
         <!-- Pillar 3: enlybiz (Marketing That Matters) -->
         <div id="div-marketing" class="division-card border-[#C4620A]/40 flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-3">
               <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-400">
                 <span class="div-dot bg-[#C4620A]"></span>
-                03 · MARKETING & GROWTH
+                03 · MARKETING &amp; GROWTH
               </span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">enlybiz.com</span>
+            </div>
+
+            <!-- Matching Growth Trajectory Graphic -->
+            <div class="svg-graphic-box mb-4">
+              <svg viewBox="0 0 220 74" class="w-full h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 58 L66 44 L110 48 L158 24 L196 14" stroke="#F59E0B" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M18 58 L66 44 L110 48 L158 24 L196 14 L196 64 L18 64 Z" fill="#C4620A" fill-opacity="0.18"/>
+                <circle cx="66" cy="44" r="3.5" fill="#F59E0B"/>
+                <circle cx="158" cy="24" r="3.5" fill="#F59E0B"/>
+                <circle cx="196" cy="14" r="5" fill="#F59E0B"/>
+              </svg>
             </div>
             
             <h3 class="text-2xl font-serif text-white mb-2">Marketing That Matters</h3>
@@ -452,12 +509,26 @@
         <!-- Pillar 4: enlysoft (Tech That Empowers) -->
         <div id="div-tech" class="division-card border-[#6B3FA0]/40 flex flex-col justify-between bg-[#080c12]">
           <div>
-            <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center justify-between mb-3">
               <span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-purple-400">
                 <span class="div-dot bg-[#6B3FA0]"></span>
-                04 · CLOUD & TECH
+                04 · CLOUD &amp; TECH
               </span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">enlysoft.net</span>
+            </div>
+
+            <!-- Matching Cloud Architecture Lattice Graphic -->
+            <div class="svg-graphic-box mb-4">
+              <svg viewBox="0 0 220 74" class="w-full h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="24" y="16" width="44" height="42" rx="6" stroke="#8B5CF6" stroke-width="1.5" fill="#6B3FA0" fill-opacity="0.18"/>
+                <rect x="88" y="16" width="44" height="42" rx="6" stroke="#A78BFA" stroke-width="1.5" fill="#6B3FA0" fill-opacity="0.28"/>
+                <rect x="152" y="16" width="44" height="42" rx="6" stroke="#8B5CF6" stroke-width="1.5" fill="#6B3FA0" fill-opacity="0.18"/>
+                <line x1="68" y1="37" x2="88" y2="37" stroke="#A78BFA" stroke-width="1.8"/>
+                <line x1="132" y1="37" x2="152" y2="37" stroke="#A78BFA" stroke-width="1.8"/>
+                <circle cx="46" cy="37" r="4" fill="#A78BFA"/>
+                <circle cx="110" cy="37" r="5" fill="#C4B5FD"/>
+                <circle cx="174" cy="37" r="4" fill="#A78BFA"/>
+              </svg>
             </div>
             
             <h3 class="text-2xl font-mono text-white mb-2">enlysoft</h3>
@@ -466,7 +537,7 @@
             </p>
 
             <ul class="space-y-1.5 text-xs text-slate-400 font-mono mb-4">
-              <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Workflow & Task Automation</li>
+              <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Workflow &amp; Task Automation</li>
               <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Cloud Systems Integration</li>
               <li><i class="fa-solid fa-check text-purple-400 mr-1.5"></i>Modern Software Support</li>
             </ul>
@@ -533,8 +604,20 @@
 
         <!-- Right: Interactive Sniper AI Match Simulator -->
         <div class="lg:col-span-6">
-          <div class="glass-panel p-6 sm:p-8 border-emerald-500/30 shadow-2xl relative">
-            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+          <div class="glass-panel p-6 sm:p-8 border-emerald-500/30 shadow-2xl relative space-y-5">
+            <!-- Neural Network Visual Banner -->
+            <div class="graphic-frame border-emerald-500/30">
+              <img src="assets/images/network.jpg" alt="Sniper AI neural talent matching network" class="h-40 w-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D14] via-[#0A0D14]/35 to-transparent"></div>
+              <div class="photo-overlay-card absolute bottom-0 inset-x-0 p-3.5 flex items-center justify-between">
+                <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-300">
+                  <i class="fa-solid fa-circle-nodes mr-1"></i> Neural Skill Graph · Active
+                </span>
+                <span class="text-[10px] font-mono text-slate-200">1,842+ Nodes</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg">
                   <i class="fa-solid fa-crosshairs"></i>
@@ -601,16 +684,28 @@
   <section id="rpo-talent" class="py-24 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
-          <i class="fa-solid fa-handshake"></i> Strategic Talent Solutions
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-serif text-white mb-4">
-          Recruitment Process Outsourcing (RPO) & <span class="italic text-[#507CF8]">Acclaimed Sourcing</span>
-        </h2>
-        <p class="text-slate-300 text-base">
-          Enlyst Smart Recruiting has earned a sterling industry reputation for effective sourcing methods, customer-centric solutions, and long-term organizational partnerships.
-        </p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <div class="lg:col-span-7 space-y-4 text-left">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 uppercase">
+            <i class="fa-solid fa-handshake"></i> Strategic Talent Solutions
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-serif text-white">
+            Recruitment Process Outsourcing (RPO) &amp; <span class="italic text-[#507CF8]">Acclaimed Sourcing</span>
+          </h2>
+          <p class="text-slate-300 text-base leading-relaxed">
+            Enlyst Smart Recruiting has earned a sterling industry reputation for effective sourcing methods, customer-centric solutions, and long-term organizational partnerships across Lahore, Islamabad, Karachi, and global tech teams.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="graphic-frame border-blue-500/30 shadow-xl">
+            <img src="assets/images/services-training.jpg" alt="Enlyst RPO workshop and workforce assessment" class="h-56 w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0D14] via-[#0A0D14]/25 to-transparent"></div>
+            <div class="photo-overlay-card absolute bottom-0 inset-x-0 p-4 flex items-center justify-between">
+              <span class="text-[11px] font-mono text-blue-300 uppercase">Full-Lifecycle RPO &amp; Training</span>
+              <span class="text-[11px] font-mono text-emerald-300 font-bold">95% 90-Day Rating</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 4 Pillars of Enlyst Recruiting Services -->
@@ -769,6 +864,16 @@
             <div id="calc-output-savings" class="text-4xl sm:text-5xl font-serif text-emerald-400 my-3">
               $112,500
             </div>
+
+            <!-- Cost Comparison Bar Graphic -->
+            <div class="svg-graphic-box mb-4 text-left">
+              <svg viewBox="0 0 260 52" class="w-full h-12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="2" y="12" class="svg-adaptive-subtext" fill="#94A3B8" font-family="DM Mono, monospace" font-size="8.5">TRADITIONAL AGENCY FEE</text>
+                <rect x="2" y="16" width="246" height="7" rx="3.5" fill="#64748B" fill-opacity="0.45"/>
+                <text x="2" y="36" fill="#10B981" font-family="DM Mono, monospace" font-size="8.5" font-weight="700">ENLYST RPO (-25% AVG COST)</text>
+                <rect x="2" y="40" width="168" height="7" rx="3.5" fill="#10B981"/>
+              </svg>
+            </div>
             
             <p class="text-xs text-slate-300 mb-6">
               Saved in reduced recruitment overhead, agency markups, and recruiter vacancy downtime.
@@ -801,6 +906,15 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       
       <div class="glass-panel p-8 sm:p-14 border-white/10 shadow-2xl relative">
+        <!-- Allied Shield Cascade Vector Emblem -->
+        <div class="mx-auto w-24 h-16 mb-3 flex items-center justify-center">
+          <svg viewBox="0 0 110 70" class="w-24 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55 6 L88 18 V36 C88 51 73 61 55 66 C37 61 22 51 22 36 V18 L55 6 Z" fill="#2D5BE3" fill-opacity="0.14" stroke="#2D5BE3" stroke-width="1.8"/>
+            <path d="M39 24 H67 L62 31 H34 Z" fill="#2D5BE3"/>
+            <path d="M43 34 H71 L66 41 H38 Z" fill="#2D5BE3" fill-opacity="0.58"/>
+            <path d="M47 44 H75 L70 51 H42 Z" fill="#2D5BE3" fill-opacity="0.28"/>
+          </svg>
+        </div>
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#2D5BE3]/10 text-blue-400 border border-[#2D5BE3]/20 mb-4 uppercase">
           <i class="fa-solid fa-shield"></i> Business Survival & Scale
         </span>
