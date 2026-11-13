@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initJobAndTalentEngine();
   initCalculators();
   initModalSystem();
-  initLiveTicker();
   initMobileMenu();
   initSmoothScroll();
 });
@@ -137,7 +136,6 @@ function initThemeToggle() {
     localStorage.setItem('enlyst_theme', newTheme);
     updateThemeIcon(newTheme);
     updateLogo(newTheme);
-    showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} theme`);
   });
 
   function updateLogo(theme) {
@@ -199,7 +197,6 @@ function initPersonaToggle() {
         ctaPrimary.innerHTML = `<span>Hire Elite Talent</span> <i class="fa-solid fa-arrow-right text-xs"></i>`;
         ctaPrimary.setAttribute('onclick', "openModal('consultation-modal')");
       }
-      showToast("Viewing experience tailored for Hiring Teams & Founders");
     } else {
       btnCandidate.classList.add('bg-blue-600', 'text-white', 'shadow-md');
       btnCandidate.classList.remove('text-slate-400');
@@ -216,7 +213,6 @@ function initPersonaToggle() {
         ctaPrimary.innerHTML = `<span>Explore Unlisted Roles</span> <i class="fa-solid fa-arrow-right text-xs"></i>`;
         ctaPrimary.setAttribute('onclick', "scrollToSection('opportunities')");
       }
-      showToast("Viewing experience tailored for Candidates & Leaders");
     }
   }
 }
@@ -795,27 +791,7 @@ function initModalSystem() {
    8. LIVE TICKER
    ========================================================================== */
 function initLiveTicker() {
-  const tickerContainer = document.getElementById('live-ticker-items');
-  if (!tickerContainer) return;
-
-  const events = [
-    "🚀 Staff AI Scientist placed at Series B AI Leader • $310k + Equity",
-    "🎯 VP of Engineering accepted offer in NYC • 12 Days to Close",
-    "⚡ Principal Rust Systems Architect matched at Global Mesh • Remote",
-    "💼 Head of Product Design secured with Tier-1 Venture Fund portfolio",
-    "🏆 98.4% 2-Year Placement Retention benchmark maintained",
-    "🛡️ 14 Confidential Executive Searches initiated this week"
-  ];
-
-  // Repeat items for smooth infinite loop
-  const html = [...events, ...events].map(item => `
-    <span class="inline-flex items-center gap-2 mx-6 text-xs text-slate-300 font-medium">
-      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-      ${item}
-    </span>
-  `).join('');
-
-  tickerContainer.innerHTML = html;
+  // Infinite scrolling announcement ticker removed per user request
 }
 
 /* ==========================================================================
@@ -880,25 +856,6 @@ function initSmoothScroll() {
    11. TOAST NOTIFICATION UTILITY
    ========================================================================== */
 function showToast(message, duration = 4000) {
-  let container = document.getElementById('toast-container');
-  if (!container) {
-    container = document.createElement('div');
-    container.id = 'toast-container';
-    document.body.appendChild(container);
-  }
-
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.innerHTML = `
-    <i class="fa-solid fa-circle-check text-cyan-400 text-lg"></i>
-    <span class="text-sm font-medium text-slate-100">${message}</span>
-  `;
-
-  container.appendChild(toast);
-
-  setTimeout(() => {
-    toast.style.opacity = '0';
-    toast.style.transform = 'translateY(10px)';
-    setTimeout(() => toast.remove(), 300);
-  }, duration);
+  // Task-done toast notifications disabled per user request
+  return;
 }

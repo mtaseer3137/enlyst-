@@ -290,16 +290,10 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1);
 }
 
-/* Toast */
-#toast-container {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  pointer-events: none;
+/* Toast (Disabled per user request) */
+#toast-container,
+.toast {
+  display: none !important;
 }
 
 .toast {
@@ -343,15 +337,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   display: inline-block;
 }
 
-/* Ticker */
+/* Ticker (Disabled per user request) */
 .ticker-wrap {
-  width: 100%;
-  overflow: hidden;
-  background: rgba(17, 22, 34, 0.6);
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  padding: 9px 0;
-  white-space: nowrap;
+  display: none !important;
 }
 
 .ticker-content {
